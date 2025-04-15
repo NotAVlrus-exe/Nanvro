@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--IOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nanvro">
+    <!--Mobile-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-title" content="Nanvro">
+
+    <meta name="theme-color" content="black">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico" />
+    <link rel="apple-touch-icon" href="assets/images/nanvro-logo-bg-transparent.png" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+            },
+            startup: { typeset: true } // Verhindert automatisches Rendering beim Laden
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <title>Nanvro - Startseite</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="/" title="Startseite">
+            <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
+        </a>
+        <div class="links">
+            <ul>
+                <li class="selected">
+                    <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
+                </li>
+                <li>
+                    <a href="math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="theme-btn" onclick="switchTheme()">
+            <i class="ri-sun-line"></i>
+        </button>
+    </nav>
+    <main>
+        <div class="hero-section">
+            <span id="nanvro-text">Nanvro.de</span>
+            <span id="hero-text">Nanvro ist eine Internetseite, auf der man tranieren kann grundlegende
+                Matheaufgaben zu lösen.</span>
+            <div class="buttons">
+                <button id="button"
+                    onclick="document.getElementById('middle-section').scrollIntoView({ behavior: 'smooth' })">Mehr
+                    erfahren</button>
+                <button id="button" onclick="sendto('math')">Ausprobieren</button>
+            </div>
+        </div>
+        <div class="middle-section" id="middle-section">
+            <div class="info-section">
+                <div class="headline">
+                    <span id="heading">Was ist Nanvro?</span>
+                    <span id="head-text"> Nanvro ist für nahezu jedes Alter geeignet, egal ob man gerade erst
+                        lernt wie man rechnet, besser im Rechnen werden will oder sich einfach ein bisschen fordern
+                        will.</span>
+                </div>
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-header" data-target="item-text1">
+                            <span id="item-head">Warum Nanvro?</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <span class="item-text" id="item-text1">Nanvro ist einfach zu nutzen, kostenlos und unterstützt
+                            beim Verstehen von einfachen Rechnungen.</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-header" data-target="item-text2">
+                            <span id="item-head">Was kann ich hier machen?</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <span class="item-text" id="item-text2">Hier kannst du grundlegendes Rechnen, wie das Rechnen
+                            mit <i class="ri-add-fill"></i>, <i class="ri-subtract-fill"></i>, <i
+                                class="ri-close-fill"></i> und <i class="ri-divide-fill"></i> trainieren. Alle haben
+                            verschiedene Schwierigkeitsstufen welche in Sternen angegeben sind.</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-header" data-target="item-text3">
+                            <span id="item-head">Ist das alles?</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <span class="item-text" id="item-text3">Nein, Nanvro befindet sich noch in der Entwicklung ist
+                            noch lange nicht vollendet. Wir arbeiten stetig daran die Seite zu verbessern. Geplant sind
+                            weiter grundlegende Übungen, sowie Vorbereitungshilfe für Prüfungen wie MSA oder
+                            Abitur.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend-section">
+                <div class="headline">
+                    <span id="heading">Empfehlungen</span>
+                </div>
+
+                <div class="tasklinks">
+                    <!--10+1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-add-fill"></i>1</span>
+                            <span id="tasktype">Plusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('plus',11,100,1,10)">Starten</button>
+                        </div>
+                    </div> <!--10+1-->
+                    <!--10-10-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-subtract-fill"></i>10</span>
+                            <span id="tasktype">Minusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('minus',11,100,11,100)">Starten</button>
+                        </div>
+                    </div> <!--10-10-->
+                    <!--1x1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<i class="ri-close-fill"></i>1</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',1,10,1,10)">Starten</button>
+                        </div>
+                    </div> <!--1x1-->
+                    <!--10x1(schwer)-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-close-fill"></i>1 (schwer)</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',11,100,1,10)">Starten</button>
+                        </div>
+                    </div> <!--10x1(schwer)-->
+                    <!--10/1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-divide-fill"></i>1</span>
+                            <span id="tasktype">Geteiltaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('geteilt',11,100,1,10)">Starten</button>
+                        </div>
+                    </div> <!--10/1-->
+                    <!--Mehr Auswahl-->
+                    <button id="button" onclick="sendto('math')">Mehr Entdecken</button>
+
+                </div> <!--tasklinks-->
+            </div> <!--recommend-section-->
+        </div>
+        <div class="update-log">
+            <div class="headline">
+                <span id="heading">Update Log</span>
+            </div>
+            <div class="log">
+                <div class="update">
+                    <span id="changes">Veröffentlichung von Nanvro</span>
+                    <span id="releasedate">unbekannt</span>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="infos">
+                <span id="headline">Kontakt & Support</span>
+                <div class="item">
+                    <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
+                </div>
+                <div class="item">
+                    <span id="type">Discord:</span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+            <div class="infos">
+                <span id="headline">Soziale Medien</span>
+                <div class="item">
+                    <span id="type">Instagram: </span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+        </div>
+        <div class="footertext-container">
+            <span id="footertext">&copy; 2025 nanvro.de - Special thanks to</span>
+            <a id="fooble-link" href="https://fooble.dev" target="_blank">Fooble</a>
+            <span id="footertext">for design ideas and support.</span>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+
+</html>

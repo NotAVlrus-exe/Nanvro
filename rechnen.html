@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico" />
+    <link rel="apple-touch-icon" href="assets/images/nanvro-logo-bg-transparent.png" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+    <!--MathJax-->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+            },
+            startup: { typeset: true } // Verhindert automatisches Rendering beim Laden
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <title>Nanvro - Rechnen</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="/" title="Startseite">
+            <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
+        </a>
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
+                </li>
+                <li class="selected">
+                    <a href="math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="theme-btn" onclick="switchTheme()">
+            <i class="ri-sun-line"></i>
+        </button>
+    </nav>
+    <main>
+        <div class="taskcontainer">
+            <div class="headline">
+                <a href="math.html" class="linkbutton">Zurück</a>
+                <div class="stats">
+                    <div class="completed">
+                        <i class="ri-check-fill"></i>
+                        <span id="completed">0</span>
+                    </div>
+                    <div class="streak">
+                        <i class="ri-fire-line"></i>
+                        <span id="streak">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="maintask">
+                <div class="upper">
+                    <p id="text"> Rechne die folgende Aufgabe aus:</p>
+                    <div class="task">
+                        <span id="num1">1</span>
+                        <div id="operator"> <!--edit in js-->
+                            <i class="ri-add-fill"></i>
+                        </div>
+                        <span id="num2">1</span>
+                    </div>
+                    <input type="text" id="answer" inputmode="numeric" name="answer" size=4 maxlength=4
+                        autocomplete="off">
+                </div>
+                <span id="feedback"></span>
+                <button id="checkbutton" onclick="checkAnswer()">Prüfen</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="infos">
+                <span id="headline">Kontakt & Support</span>
+                <div class="item">
+                    <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
+                </div>
+                <div class="item">
+                    <span id="type">Discord:</span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+            <div class="infos">
+                <span id="headline">Soziale Medien</span>
+                <div class="item">
+                    <span id="type">Instagram: </span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+        </div>
+        <div class="footertext-container">
+            <span id="footertext">&copy; 2025 nanvro.de - Special thanks to</span>
+            <a id="fooble-link" href="https://fooble.dev" target="_blank">Fooble</a>
+            <span id="footertext">for design ideas and support.</span>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/rechnen.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>
