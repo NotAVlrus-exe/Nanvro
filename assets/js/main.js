@@ -50,6 +50,7 @@ function switchTheme() {
     if (sessionStorage.getItem('theme') == "dark") {
         document.documentElement.setAttribute('data-theme', "light");
         sessionStorage.setItem('theme', "light");
+        
     } else {
         document.documentElement.setAttribute('data-theme', "dark");
         sessionStorage.setItem('theme', "dark");
@@ -67,4 +68,8 @@ function setValues(mathtype, min1, max1, min2, max2) {
 
 function sendto(location) {
     window.location.href = location+".html";
+}
+
+function scrollto(location) {
+    document.getElementById(location).scrollIntoView({ behavior: 'smooth' })
 }

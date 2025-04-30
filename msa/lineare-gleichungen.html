@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--IOS-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nanvro">
+        <!--Mobile-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="mobile-web-app-title" content="Nanvro">
+    
+        <meta name="theme-color" content="black">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="/assets/images/nanvro-icon-bg-transparent.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/nanvro-logo-bg-transparent.png" />
+    
+        <!-- Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <!-- MathJax -->
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                },
+                startup: { typeset: true },
+                options: {
+                    renderActions: {
+                        addMenu: [],
+                    },
+                }
+            };
+        </script>
+        <script src="/assets/js/tex-svg.js" async></script>
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/font.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+    
+        <title>Nanvro - Gleichungen</title>
+    </head>
+<body>
+    <nav>
+        <a class="logo" href="/" title="Startseite">
+            <img src="/assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
+        </a>
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
+                </li>
+                <li class="selected">
+                    <a href="/math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                </li>
+            </ul>
+        </div>
+        <button class="theme-btn" onclick="switchTheme()">
+            <i class="ri-sun-line"></i>
+        </button>
+    </nav>
+    <main>
+        <div class="content">
+            <span id="titel">Lineare Gleichungen</span>
+            <div class="section">
+                <span id="section-heading">Definition</span>
+                <div class="section-content"> 
+                    <span id="text">Lineare Gleichungen stellen mit Hilfe eines Gleichheitszeichens dar, wie die beiden Seiten zueinander stehen. Sie enthalten nur einfache Rechenoperationen.</span>
+                    <span id="math-text">\(ax + b = c\)</span>
+                    <span id="text">Wenn nur eine Variable unbekannt ist, kann man diese berechnen.</span>
+                </div>
+            </div>
+            <div class="section">
+                <span id="section-heading">Lineare Gleichungen umstellen</span>
+                <div class="section-content"> 
+                    <span id="text">Bei einfachen Gleichungen ist oft schon klar, was das Ergebnis ist, wenn es schwerer wird ist es allerdings sinnvoll auch diese umstellen zu können. Um Gleichungen umstellen zu können, muss man immer die passenden Gegenoperationen verwenden.</span>
+                    <span id="text">Die Gegenoperation zur Addition (<i class="ri-add-fill"></i>) ist bspw. die Subtraktion (<i class="ri-subtract-fill"></i>) und die zur Multiplikation (<i class="ri-close-fill"></i>) die Division (<i class="ri-divide-fill"></i>)</span>
+                    <span id="text">Man muss dokumentieren, was man mit der Gleichung macht, damit es für andere verständlich ist und es einfacher ist Fehler nachzuvollziehen. Das tut man mit einem Umformungsstrich ( | )</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel:</span>
+                        <span id="text">x ist hier die unbekannte Variable.</span>
+                        <span id="math-text">\(x+3=7\)</span>
+                        <span id="text">Jetzt muss x auf eine Seite isoliert werden. Wir müssen also 3 auf die andere Seite verschieben. 3 wird addiert (<i class="ri-add-fill"></i>) also müssen wir die 3 subtrahieren (<i class="ri-subtract-fill"></i>).</span>
+                        <span id="math-text">\(x+3=7\quad\vert-3\)</span>
+                        <span id="text">-3 wird nun auf beiden Seiten hinzugefügt, damit beide Seiten den gleichen Gesamtwert behalten.</span>
+                        <span id="math-text">\(x+3-3=7-3\)</span>
+                        <span id="text">Jetzt müssen wir die Gleichung zusammenfassen. + 3 und - 3 gleichen sich aus und 7 - 3 ergibt 4. </span>
+                        <span id="math-text">\(x=4\)</span>
+                        <span id="text">Nun ist ein klares Ergebnis zu erkennen. Es kann gefordert sein, dass man eine Probe durchführt um zu kontrollieren, ob das Ergebnis korrekt ist.</span>
+                        <span id="math-text">\(x+3=7\)</span>
+                        <span id="text">Dafür setzt man den erhaltenen Wert in die Anfangsgleichung ein.</span>
+                        <span id="math-text">\(4+3=7\)</span>
+                        <span id="text">Nun rechnet man beide Seiten aus.</span>
+                        <span id="math-text">\(7=7\) w.A.</span>
+                        <span id="text">Das Ergenis ist richtig, da die Gleichung eine wahre Aussage (w.A.) ergibt. Das hält man dann in einer Lösungsmenge fest, welche dem ausgerechneten x-Wert entspricht.</span>
+                        <span id="math-text">\(L=\{4\}\)</span>
+                    </div>
+                <span id="text">Wenn mehrere Terme mit mehreren Inhalten auf der Seite mit der Unbekannten hat, ist es wichtig, darauf zu achten, dass der Term mit der Variable isoliert wird, da es sonst leicht zu Fehlern kommen kann.</span>    
+                </div>
+            </div>
+            <div class="section">
+                <span id="section-heading">Zusammenfassung</span>
+                <div class="section-content"> 
+                    <span id="text">Das Umstellen von Gleichungen hilft einem fehlende Variablen berechnen zu können. Man muss darauf achten immer die passende Gegenoperation anzuwenden. Zuerst sollte man die Gleichung soweit wie möglich zusammenfassen, danach sollte man den Term mit der Variable isolieren und danach die Variable selbst. Zum Schluss macht man eine Probe, indem man die Variable in die Anfangsgleichung einsetzt und eine Lösungsmenge aufschreibt.</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <span id="section-heading">Übungen</span>
+                <div class="section-content">
+                    <div class="task">
+                        <span id="math-text">\(2 \times x - 3 = 12 + 1\)</span> 
+                        <button id="button" onclick="showsolution('solution1')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(\frac{x}{2} + 4 = 3 \times 7 - 3\)</span>
+                        <button id="button" onclick="showsolution('solution2')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(\frac{12}{3} \times 2 = 3 \times x - 3 \times 2\)</span>
+                        <button id="button" onclick="showsolution('solution3')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(\frac{12}{3} \times 2 = 3 \times x - 3 \times 2\)</span>
+                        <button id="button" onclick="showsolution('solution3')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(5 + \frac{6}{x} = 13 \times 3 - 30\)</span>
+                        <button id="button" onclick="showsolution('solution4')">Lösung anzeigen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="solutions" class="solutions">
+        <div id="solution1">
+            <div class="closebutton" onclick="hidesolution('solution1')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(2 \times x - 3 = 12 + 1 \)</span>
+            <span id="text">Zuerst müssen wir alles soweit wie möglich zusammenfassen. In diesem Fall geht das nur bei 12 <i class="ri-add-fill"></i> 1.</span>
+            <span id="math-text">\(2 \times x - 3 = 13\)</span>
+            <span id="text">Nun muss der Term mit der Variable isoliert werden. Also muss die <i class="ri-subtract-fill"></i> 3 verschoben werden. Das tun wir mit der Gegenoperation <i class="ri-add-fill"></i> 3.</span>
+            <span id="math-text">\(2 \times x - 3 = 13\quad\vert + 3\)</span>
+            <span id="text">Auf beiden Seiten wird jetzt <i class="ri-add-fill"></i>3 gerechnet.</span>
+            <span id="math-text">\(2 \times x - 3 + 3 = 13 + 3\)</span>
+            <span id="text">Jetzt können wir wieder einige Teile zusammenfassen. <i class="ri-add-fill"></i>3 und <i class="ri-subtract-fill"></i>3 gleichen sich aus. Auf der rechten Seite fassen wir die 13 und 3 zusammen.</span>
+            <span id="math-text">\(2 \times x = 16\)</span>
+            <span id="text">Der Term mit der Variable ist nun isloiert. Nun muss die Variable selbst isoliert werden. Das heißt, die <i class="ri-close-fill"></i>2 muss verschoben werden.</span>
+            <span id="math-text">\(2 \times x = 16\quad\vert \div2\)</span>
+            <span id="text">Auf beiden Seiten rechnet man <i class="ri-subtract-fill"></i>2.</span>
+            <span id="math-text">\(\frac{2x}{2} = \frac{16}{2}\)</span>
+            <span id="text">Bei multiplizieren von Variablen wird das <i class="ri-close-fill"></i> Symbol oft weggelassen. Jetzt müssen wir erneut vereinfachen. Auf der linken Seite kürzt man die zwei mit der zwei und auf der rechten Seite die 16 mit der 2.</span>
+            <span id="math-text">\(x = 8\)</span>
+            <span id="text">Jetzt haben wir eine klare Angabe zum Wert der Variable. Jetzt macht man, wenn es in der Aufgabe gefordert ist, eine Probe. Dazu setzen wir unseren x-Wert in die Anfangsgleichung ein.</span>
+            <span id="math-text">\(2 \times 8 - 3 = 12 + 1 \)</span>
+            <span id="text">Wir rechnen beide Seiten aus.</span>
+            <span id="math-text">\(13 = 13\) w.A.</span>
+            <span id="text">Die Probe ergibt eine wahre Aussage. Die Lösungsmenge ist somit der zuvor ausgerechnete x-Wert 8.</span>
+            <span id="math-text">\(L=\{8\}\)</span>
+        </div>
+        <div id="solution2">
+            <div class="closebutton" onclick="hidesolution('solution2')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Lösung zur Aufgabe 2</span>
+            <span id="math-text">\(\frac{x}{2} + 4 = 3 \times 7 - 3\)</span>
+            <span id="text">Zu Beginn wird soweit wie möglich zusammengefasst. Das geht nur auf der echten Seite. Es gilt Punkt vor Strich, also 3 <i class="ri-close-fill"></i> 7 = 21. Diese dann <i class="ri-subtract-fill"></i> 3 = 18</span>
+            <span id="math-text">\(\frac{x}{2} + 4 = 18\)</span>
+            <span id="text">Der Term mit der Variable wird auf eine Seite isoliert. Also muss die <i class="ri-add-fill"></i> 4 verschoben werden.</span>
+            <span id="math-text">\(\frac{x}{2} + 4 = 18\quad\vert - 4\)</span>
+            <span id="text">Wenn man später weniger aufschreiben will, dann macht man die Zusammenfassungsschritte im Kopf.</span>
+            <span id="math-text">\(\frac{x}{2} = 14\)</span>
+            <span id="text">Der Term ist isoliert, also wird jetzt die Variable isoliert.</span>
+            <span id="math-text">\(\frac{x}{2} = 14\quad\vert \times 2\)</span>
+            <span id="text"><i class="ri-close-fill"></i> ist die Gegenoperation zum Bruch (ein Bruch ist <i class="ri-divide-fill"></i>). Das kürzen kann man auch im Kopf machen.</span>
+            <span id="math-text">\(x = 28\)</span>
+            <span id="text">Nun kann man wieder eine Probe machen. Also setzen wir in die Angangsgleichung ein.</span>
+            <span id="math-text">\(\frac{28}{2} + 4 = 3 \times 7 - 3\)</span>
+            <span id="text">Wir rechnen zuerst die einzelnen Terme aus.</span>
+            <span id="math-text">\(14 + 4 = 21 - 3\)</span>
+            <span id="text">Danach rechnen wir die einzelnen Terme zusammen.</span>
+            <span id="math-text">\(18 = 18\) w.A.</span>
+            <span id="text">Wir haben richtig gerechnet und können die Lösungsmenge angeben.</span>
+            <span id="math-text">\(L=\{28\}\)</span>
+        </div>
+        <div id="solution3">
+            <div class="closebutton" onclick="hidesolution('solution3')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Lösung zur Aufgabe 3</span>
+            <span id="math-text">\(\frac{12}{3} \times 2 = 3 \times x - 2 \times 2\)</span>
+            <span id="text">Um es übersichtlich zu halten, fassen wir die Gleichung in zwei Schritten zusammen. Auf der linken Seite berechnen wir 12 <i class="ri-divide-fill"></i> 3 = 4. Auf der rechten Seite 2 <i class="ri-close-fill"></i> 2 = 4.</span>
+            <span id="math-text">\(4 \times 2 = 3\times x - 4\)</span>
+            <span id="text">Dann fassen wir auf der linken Seite noch 4 <i class="ri-close-fill"> 2 zu 8 zusammen.</i></span>
+            <span id="math-text">\(8 = 3\times x - 4\)</span>
+            <span id="text">Bei Gleichungen kann man die Seiten jederzeit vertauschen. x muss nicht auf der linken Seite stehen, es trägt aber zur Übersichtlichkeit bei. Den Term mit x isloieren wir nun wieder.</span>
+            <span id="math-text">\(3\times x - 4 = 8\quad\vert \times 4\)</span>
+            <span id="text">Als nächstes können wir direkt die Variable isolieren.</span>
+            <span id="math-text">\(3\times x = 12\quad\vert \div 3\)</span>
+            <span id="text">Beide Seiten werden durch 3 geteilt.</span>
+            <span id="math-text">\(x = 4\)</span>
+            <span id="text">Wir setzen wieder in die Anfangsgleichung ein um die Probe durchzuführen.</span>
+            <span id="math-text">\(\frac{12}{3} \times 2 = 3 \times 4 - 2 \times 2\)</span>
+            <span id="text">Jeder Term wir zusammengefasst.</span>
+            <span id="math-text">\(8 = 12 - 4\)</span>
+            <span id="text">Nun fassen wir die gesamte Gleichung zusammen.</span>
+            <span id="math-text">\(8 = 8\) w.A.</span>
+            <span id="text">Die Lösung ist richtig, also geben wir eine Lösungsmenge an.</span>
+            <span id="math-text">\(L=\{4\}\)</span>
+        </div>
+        <div id="solution4">
+            <div class="closebutton" onclick="hidesolution('solution4')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Lösung zur Aufgabe 4</span>
+            <span id="math-text">\(5 + \frac{6}{x} = 13\times3 - 25\)</span>
+            <span id="text">Die Gleichung wird vereinfacht. Hier kann nur auf der rechten Seite vereinfacht werden.</span>
+            <span id="math-text">\(5 + \frac{6}{x} = 14\)</span>
+            <span id="text">Die 5 wird verschoben, damit der Term mit der Variable isoliert wird.</span>
+            <span id="math-text">\(5 + \frac{6}{x} = 14\quad\vert - 5\)</span>
+            <span id="text">Beide Seiten werden zusammengefasst.</span>
+            <span id="math-text">\(\frac{6}{x} = 9\)</span>
+            <span id="text">Nun muss x isoliert werden, dafür wird die 6 auf die anderes Seite gebracht.</span>
+            <span id="math-text">\(\frac{6}{x} = 9\quad\vert \div 6\)</span>
+            <span id="text">Beide Seiten werden wieder zusammengefasst und gekürzt.</span>
+            <span id="math-text">\(\frac{1}{x} = \frac{9}{6}\)</span>
+            <span id="text">Nun können wir auf beiden Seiten jeweils den Bruch umdrehen, damit wir eine klare Angabe für die Variable haben.</span>
+            <span id="math-text">\(x = \frac{2}{3}\)</span>
+            <span id="text">Da jede Zahl <i class="ri-divide-fill"></i> 1 unverändert bleibt kann man den Bruch für x nun weglassen. Nun kann erneut eine Probe gemacht werden um zu überprüfen, ob die Variable richtig ermittelt wurde.</span>
+            <span id="math-text">\(5 + \frac{6}{\frac{2}{3}} = 13\times3 - 25\)</span>
+            <span id="text">Damit ein Doppelbruch vermieden wird kann die 3 auf den oberen Bruchstrich gezogen werden, wo sie multipliziert wird.</span>
+            <span id="math-text">\(5 + \frac{18}{2} = 13 \times 3 - 25\)</span>
+            <span id="text">Alles wird zusammengefasst.</span>
+            <span id="math-text">\(9 = 9\) w.A.</span>
+            <span id="text">Da die Lösung richtig ist, wird wieder eine Lösungsmenge angegeben.</span>
+            <span id="math-text">\(L=\{\frac{2}{3}\}\)</span>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-sections">
+            <div class="infos">
+                <span id="headline">Kontakt & Support</span>
+                <div class="item">
+                    <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
+                </div>
+                <div class="item">
+                    <span id="type">Discord:</span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+            <div class="infos">
+                <span id="headline">Soziale Medien</span>
+                <div class="item">
+                    <span id="type">Instagram: </span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+        </div>
+        <div class="footertext-container">
+            <span id="footertext">&copy; 2025 nanvro.de - Special thanks to</span>
+            <a id="fooble-link" href="https://fooble.dev" target="_blank">Fooble</a>
+            <span id="footertext">for design ideas and support.</span>
+        </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+    <script src="loesung.js"></script>
+</body>
+</html>
