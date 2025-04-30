@@ -28,10 +28,15 @@
                 inlineMath: [['\\(', '\\)']],
                 displayMath: [['\\[', '\\]']],
             },
-            startup: { typeset: true } // Verhindert automatisches Rendering beim Laden
+            startup: { typeset: true },
+            options: {
+                renderActions: {
+                    addMenu: [],
+                },
+            }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="/assets/js/tex-svg.js" async></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/font.css" />
@@ -46,13 +51,13 @@
         <a class="logo" href="/" title="Startseite">
             <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
         </a>
-        <div class="links">
+        <div class="nav-items">
             <ul>
                 <li class="selected">
                     <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
                 </li>
                 <li>
-                    <a href="math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                    <a href="/math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
                 </li>
             </ul>
         </div>
@@ -64,12 +69,9 @@
     <main>
         <div class="hero-section">
             <span id="nanvro-text">Nanvro.de</span>
-            <span id="hero-text">Nanvro ist eine Internetseite, auf der man tranieren kann grundlegende
-                Matheaufgaben zu lösen.</span>
+            <span id="hero-text">Nanvro ist eine Internetseite, auf der man tranieren kann grundlegende Matheaufgaben zu lösen oder sich auf Prüfungen wie das MSA (später auch das Abitur) vorbereiten kann.</span>
             <div class="buttons">
-                <button id="button"
-                    onclick="document.getElementById('middle-section').scrollIntoView({ behavior: 'smooth' })">Mehr
-                    erfahren</button>
+                <button id="button" onclick="document.getElementById('middle-section').scrollIntoView({ behavior: 'smooth' })">Mehr erfahren</button>
                 <button id="button" onclick="sendto('math')">Ausprobieren</button>
             </div>
         </div>
@@ -117,7 +119,7 @@
                     <span id="heading">Empfehlungen</span>
                 </div>
 
-                <div class="tasklinks">
+                <div class="links">
                     <!--10+1-->
                     <div class="link-container">
                         <div class="left">
@@ -193,10 +195,38 @@
                             <button id=button onclick="setValues('geteilt',11,100,1,10)">Starten</button>
                         </div>
                     </div> <!--10/1-->
-                    <!--Mehr Auswahl-->
-                    <button id="button" onclick="sendto('math')">Mehr Entdecken</button>
-
-                </div> <!--tasklinks-->
+                                        <!--1^1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<sup>2</sup></span>
+                            <span id="tasktype">Potenzaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('potenz',1,10,2,2)">Starten</button>
+                        </div>
+                    </div>
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">\(\sqrt{100}\)</span>
+                            <span id="tasktype">Wurzelaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('wurzel',1,1000,2,2)">Starten</button>
+                        </div>
+                    </div> <!--100^1/2-->
+                </div> <!--links-->
+                <!--Mehr Auswahl-->
+                <button id="button" onclick="sendto('math')">Mehr Entdecken</button>
             </div> <!--recommend-section-->
         </div>
         <div class="update-log">
@@ -205,8 +235,12 @@
             </div>
             <div class="log">
                 <div class="update">
-                    <span id="changes">Veröffentlichung von Nanvro</span>
+                    <span id="changes">Nanvro wurde veröffentlicht</span>
                     <span id="releasedate">unbekannt</span>
+                </div>
+                <div class="update">
+                    <span id="changes">Ich habe einen dicken Bizeps</span>
+                    <span id="releasedate">schon immer</span>
                 </div>
             </div>
         </div>

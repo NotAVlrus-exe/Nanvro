@@ -2,33 +2,46 @@
 <html lang="de" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--IOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nanvro">
+    <!--Mobile-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-title" content="Nanvro">
+
+    <meta name="theme-color" content="black">
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico">
-    <link rel="apple-touch-icon" href="assets/images/nanvro-logo-bg-transparent.png">
+    <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico" />
+    <link rel="apple-touch-icon" href="assets/images/nanvro-logo-bg-transparent.png" />
 
     <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- MathJax -->
     <script>
         window.MathJax = {
             tex: {
                 inlineMath: [['\\(', '\\)']],
                 displayMath: [['\\[', '\\]']],
             },
-            startup: { typeset: true } // Verhindert automatisches Rendering beim Laden
+            startup: { typeset: true },
+            options: {
+                renderActions: {
+                    addMenu: [],
+                },
+            }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-
+    <script src="/assets/js/tex-svg.js" async></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
 
     <title>Nanvro - Mathe</title>
 </head>
@@ -38,7 +51,7 @@
         <a class="logo" href="/" title="Startseite">
             <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
         </a>
-        <div class="links">
+        <div class="nav-items">
             <ul>
                 <li>
                     <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
@@ -61,7 +74,7 @@
                 <div class="section-title">
                     <i class="ri-add-fill"></i>
                 </div>
-                <div class="tasklinks">
+                <div class="links">
                     <!--1+1-->
                     <div class="link-container">
                         <div class="left">
@@ -117,7 +130,7 @@
                 <div class="section-title">
                     <i class="ri-subtract-fill"></i>
                 </div>
-                <div class="tasklinks">
+                <div class="links">
                     <!--1-1-->
                     <div class="link-container">
                         <div class="left">
@@ -173,7 +186,7 @@
                 <div class="section-title">
                     <i class="ri-close-fill"></i>
                 </div>
-                <div class="tasklinks">
+                <div class="links">
                     <!--1x1 Feld -->
                     <div class="link-container">
                         <div class="left">
@@ -260,7 +273,7 @@
                 <div class="section-title">
                     <i class="ri-divide-fill"></i>
                 </div>
-                <div class="tasklinks">
+                <div class="links">
                     <!--1/1-->
                     <div class="link-container">
                         <div class="left">
@@ -299,7 +312,7 @@
                 <div class="section-title">
                     <span>\(\square\)<sup>\(\square\)</sup></span> <!--Square from MathJax-->
                 </div>
-                <div class="tasklinks">
+                <div class="links">
                     <!--1^1-->
                     <div class="link-container">
                         <div class="left">
@@ -353,8 +366,8 @@
                 <div class="section-title">
                     <span id="sqrt-title">\(\sqrt{\phantom{1}}\)</span> <!--Square from MathJax-->
                 </div>
-                <div class="tasklinks">
-                    <!--10^2-->
+                <div class="links">
+                    <!--100^2-->
                     <div class="link-container">
                         <div class="left">
                             <span id="description">\(\sqrt{100}\)</span>

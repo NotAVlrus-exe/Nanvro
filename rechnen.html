@@ -3,7 +3,17 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--IOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nanvro">
+    <!--Mobile-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-title" content="Nanvro">
+
+    <meta name="theme-color" content="black">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico" />
@@ -11,19 +21,23 @@
 
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-
-    <!--MathJax-->
+    <!-- MathJax -->
     <script>
         window.MathJax = {
             tex: {
                 inlineMath: [['\\(', '\\)']],
                 displayMath: [['\\[', '\\]']],
             },
-            startup: { typeset: true } // Verhindert automatisches Rendering beim Laden
+            startup: { typeset: true },
+            options: {
+                renderActions: {
+                    addMenu: [],
+                },
+            }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="/assets/js/tex-svg.js" async></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/font.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -37,13 +51,13 @@
         <a class="logo" href="/" title="Startseite">
             <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
         </a>
-        <div class="links">
+        <div class="nav-items">
             <ul>
                 <li>
                     <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
                 </li>
                 <li class="selected">
-                    <a href="math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                    <a href="/math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
                 </li>
             </ul>
         </div>
