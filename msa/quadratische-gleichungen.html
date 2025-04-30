@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--IOS-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Nanvro">
+        <!--Mobile-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="mobile-web-app-title" content="Nanvro">
+    
+        <meta name="theme-color" content="black">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="/assets/images/nanvro-icon-bg-transparent.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/nanvro-logo-bg-transparent.png" />
+    
+        <!-- Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <!-- MathJax -->
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                },
+                startup: { typeset: true },
+                options: {
+                    renderActions: {
+                        addMenu: [],
+                    },
+                }
+            };
+        </script>
+        <script src="/assets/js/tex-svg.js" async></script>
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/font.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+    
+        <title>Nanvro - Gleichungen</title>
+    </head>
+<body>
+    <nav>
+        <a class="logo" href="/" title="Startseite">
+            <img src="/assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
+        </a>
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
+                </li>
+                <li class="selected">
+                    <a href="/math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                </li>
+            </ul>
+        </div>
+        <button class="theme-btn" onclick="switchTheme()">
+            <i class="ri-sun-line"></i>
+        </button>
+    </nav>
+    <main>
+        <div class="content">
+            <span id="titel">Quadratische Gleichungen</span>
+            <div class="section">
+                <span id="section-heading">Definition</span>
+                <div class="section-content"> 
+                    <span id="text">Qudratische Gleichungen sehen ähnlich aus wie lineare Gleichungen, enthalten aber quadratische Rechenoperationen.</span>
+                    <span id="math-text">\(ax\)<sup>2</sup> <i class="ri-add-fill"></i> \(bx\) <i class="ri-add-fill"></i> \(c = 0\)</span>
+                    <span id="text">Wenn nur eine Variable unbekannt ist, kann man diese berechnen.</span>
+                </div>
+            </div>
+            <div class="section">
+                <span id="section-heading">Benötigtes Vorwissen</span>
+                <div class="section-content"> 
+                    <span id="text">Für dieses Kapitel solltest du wissen, wie du <a href="lineare-gleichungen.html">lineare Gleichungen</a> löst und umstellst.</span>
+                </div>
+            </div>
+            <div class="section">
+                <span id="section-heading">Verschiedene Möglichkeiten</span>
+                <div class="section-content"> 
+                    <span id="text">Es gibt mehrere Möglichkeiten qudratische Gleichungen zu lösen, bspw. <button id="text-scroll-link" onclick="scrollto('faktorisieren')">das Faktorisieren (Nullproduktregel)</button>, <button id="text-scroll-link" onclick="scrollto('mitternachtsformel')">die Mitternachtsformel (abc-Formel)</button> oder <button id="text-scroll-link" onclick="scrollto('p-q')">die p-q-Formel</button>. Um diese zu verwenden muss sich die Gleichung die Normalform haben.</span>
+                </div>
+            </div>
+            <div class="section" id="faktorisieren">
+                <span id="section-heading">Faktorisieren</span>
+                <div class="section-content"> 
+                    <span id="text">Man faktorisiert eine Gleichung, indem man die Gleichung in zwei Klammern schreibt.</span>
+                    <span id="text">Man kann die Gleichung aus der Normalform so umformen, dass sie in einer Gleichung mit zwei Klammern steht, welche = 0 ist. Wenn ein Faktor als eine Klammer 0 ist, dann erhält man eine wahre Aussage.</span>
+                    <span id="text">Dazu muss man die passende x-Wert welche sich leicht erkennen lassen einsetzen.</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel:</span>
+                        <span id="text">Die Gleichung wird mit dem Vorwissen über <a href="lineare-gleichungen.html">lineare Gleichungen</a> in die Normalform gebracht. Es ist also auf einer Seite nur eine 0.</span>
+                        <span id="math-text">\(x^2+5x+6 = 0\)</span>
+                        <span id="text">Nun wird faktorisiert, dafür braucht man die Zahlen die addiert 5 und multipliziert 6 ergeben. Also in diesem Fall 2 und 3. Wenn das nicht möglich ist oder zu kompliziert sollte man eine andere Möglichkeit nutzen.</span>
+                        <span id="math-text">\((x+2)(x+3) = 0\)</span>
+                        <span id="text">Die Umstellung kommt so zu stande, dass wenn man die Klammer auflöst wieder auf deine nicht vereinfachte Normalform kommt.</span>
+                        <span id="math-text">\((x\times x)+(x\times3)+(2\times x)\) + \((2\times3)\)</span>
+                        <span id="text">Wenn man das wieder vereinfacht kommt man auf die Normalform.</span>
+                        <span id="text">in der Gleichung mit den Klammern muss nun ein Faktor 0 sein, damit die Gleichung wahr ist, da alles <i class="ri-close-fill"></i> 0 = 0. Also muss in einer Klammer 0 rauskommen.</span>
+                        <span id="math-text">\((-2+2)\)\((-2+3) = 0 \quad\vert\quad(-3+2)(-3+3) = 0\)</span>
+                        <span id="text">Wenn man nun beide möglichen Lösungen vereinfacht und zusammenfasst ist ein Faktor 0.</span>
+                        <span id="math-text">\(0\times1 = 0\quad\vert\quad-1\times0 = 0\)</span>
+                        <span id="text">Wenn man diese dann fertig ausrechnet erhält man zwei wahre Aussagen.</span>
+                        <span id="math-text">\(0 = 0\) w.A.\(\quad\) | \(\quad 0 = 0\) w.A.</span>
+                        <span id="text">Die Lösungsmenge enthält also zwei Zahlen. Man kann nun, wenn es gefordert ist, eine Probe machen.</span>
+                        <span id="math-text">\((-3)^2+5\times(-3)+6 = 0\)</span>
+                        <span id="text">Die Terme werden zuerst ausgerechnet.</span>
+                        <span id="math-text">\(9-15+6 = 0\)</span>
+                        <span id="text">Dann werden alle Terme addiert.</span>
+                        <span id="math-text">\(0 = 0\) w.A.</span>
+                        <span id="text">Nun wird die zweite Probe gemacht.</span>
+                        <span id="math-text">\((-2)^2+5\times(-2)+6 = 0\)</span>
+                        <span id="text">Die Terme werden wieder ausgerechnet.</span>
+                        <span id="math-text">\(4-10+6 = 0\)</span>
+                        <span id="text">Dann werden alle Terme addiert.</span>
+                        <span id="math-text">\(0 = 0\) w.A.</span>
+                        <span id="text">Nun wird die Lösungsmenge aufgeschrieben.</span>
+                        <span id="math-text">\(L=\{-3;-2\}\)</span>
+                        <span id="text">Mehrere Zahlen trennt man mit einem Semikolorn ( ; ), damit man mehrere Zahlen nicht mit Kommazahl verwechselt.</span>
+                    </div>
+                    <span id="text">Hier kannst du noch <button id="text-scroll-link" onclick="scrollto('uebung-faktorisieren')">üben</button>.</span>
+                </div>
+            </div>
+            <div class="section" id="mitternachtsformel">
+                <span id="section-heading">Die Mitternachtsformel (abc-Formel)</span>
+                <div class="section-content"> 
+                    <span id="text">Die Mitternachtsformel ist eine Formel die zwar schwer zu merken ist, aber dafür auch bei komplexen Aufgaben funktioniert.</span>
+                    <span id="text">Sie lautet:</span>
+                    <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+                    <span id="text">Das einfach ist, dass wenn man sie kennt nur einsetzten muss und dann ausrechnen.</span>
+                    <span id="text">Einfacher zu merken ist es mit dem Reim:</span>
+                    <span id="text">"Minus b, plus minus <b>flott</b>, unter der Wurzel steckt viel <b>Schrott</b> nämlich b Quadrat minus <b>4ac</b> und das alles durch 2a, <b>oje</b>!"</span>
+                    <span id="text">Es gibt mehrere Möglichkeiten, entweder unter der Wurzel ist eine positive Zahl, dann gibt es zwei Lösungen, eine 0, dann gibt es eine Lösung oder eine negative Zahl, dann gibt es ohne komplexe Zahlen keine Lösung.</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit positiver Zahl unter der Wurzel:</span>
+                        <span id="text">Hier kannst du wieder dein Vorwissen von den <a href="lineare-gleichungen.html">linearen Gleichungen</a> anwenden, denn hier setzt man auch nur ein.</span>
+                        <span id="math-text">\(3x^2\) <i class="ri-add-fill"></i> \(4x\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Nun nimmt man die sich allgemeine quadratische Gleichung dazu.</span>
+                        <span id="math-text">\(ax^2\) <i class="ri-add-fill"></i> \(bx\) <i class="ri-add-fill"></i> \(c = 0\)</span>
+                        <span id="text">Jetzt können die passenden Wert abgelesen werden.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+                        <span id="text">Diese werden dann in die Mitternachtsformel eingesetzt.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-4\pm\sqrt{4^2 - 4 \times 3\times 1}}{2 \times 3}\)</span>
+                        <span id="text">Nun rechnen wir aus, was unter der Wurzel steht, damit wir herausfinden, ob wir weiter rechnen müssen.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-4\pm\sqrt{16 - 12}}{2 \times 3}\)</span>
+                        <span id="text">Bei einer negativen Zahl unter der Wurzel müssten wir nicht weiterrechnen.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-4\pm\sqrt{4}}{2 \times 3}\)</span>
+                        <span id="text">Die Zahl ist positiv, also gibt es zwei Lösungen für x.</span>
+                        <span id="math-text" class="complex">\(x_1 = \frac{-4+2}{2 \times 3}\quad\) | \(\quad x_2 = \frac{-4 - 2}{2 \times 3}\)</span>
+                        <span id="text">Beide Brüche werden zusammengefasst.</span>
+                        <span id="math-text" class="complex">\(x_1 = \frac{-2}{6}\quad\) | \(\quad x_2 = \frac{-6}{6}\)</span>
+                        <div id="text">Dann kann noch gekürzt werden.</div>
+                        <span id="math-text" class="complex">\(x_1 = -\frac{1}{3}\quad\) | \(\quad x_2 = -1\)</span>
+                        <span id="text">Hier ist es meistens sinnvoll Proben zu machen, da sich bei lösen einer komplexen Gleichung schnell Fehler einschleichen.</span>
+                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(-\frac{1}{3}^2\) <i class="ri-add-fill"></i> \(4\) <i class="ri-close-fill"></i> \(-\frac{1}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Wir lösen zuerst die einzelnen Terme.</span>
+                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(\frac{1}{9}\) <i class="ri-add-fill"></i> \(-\frac{4}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Für die Übersichtlichkeit mach wir es in zwei Schritten.</span>
+                        <span id="math-text">\(\frac{1}{3}\) <i class="ri-add-fill"></i> \(-\frac{4}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Nun addieren wir alle Terme zusammen.</span>
+                        <span id="math-text">\(0 = 0\) w.A.</span>
+                        <span id="text">Wir haben aber zwei Lösungen, also müssen wir auch zwei Proben machen.</span>
+                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(-1^2\) <i class="ri-add-fill"></i> \(4\) <i class="ri-close-fill"></i> \(-1\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Wir rechnen wiede die Terme aus.</span>
+                        <span id="math-text">\(3\) <i class="ri-add-fill"></i> \(-4\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Nun addieren wir alle Terme zusammen.</span>
+                        <span id="math-text">\(0 = 0\) w.A.</span>
+                        <span id="text">Als letztes wird wieder eine Lösungsmenge angegeben.</span>
+                        <span id="math-text">\(L=\{\)<i class="ri-subtract-fill"></i>\(1;\)<i class="ri-subtract-fill"></i>\(\frac{1}{3}\}\)</span>
+                    </div>
+                    <span id="text">Nun kann es aber passieren, dass unter der Wurzel eine 0 herauskommt. Dann gibt es nur eine Lösung. Das heißt man braucht auch nur eine Probe.</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit 0 unter dr Wurzel:</span>
+                        <span id="math-text">\(4x^2\) <i class="ri-add-fill"></i> \(4x\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Wir setzen in die Mitternachtsformel ein.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+                        <span id="math-text" class="complex">\(x = \frac{-4\pm\sqrt{4^2 - 4 \times 4\times 1}}{2 \times 4}\)</span>
+                        <span id="text">Rechnen den Wert unter der Wurzel aus-</span>
+                        <span id="math-text" class="complex">\(x = \frac{-4\pm\sqrt{0}}{2 \times 4}\)</span>
+                        <span id="text">Die Wurzel aus 0 kann nun ignoriert werden und feritg ausgerechnet werden.</span>
+                        <span id="math-text" class="complex">\(x = -\frac{1}{2}\)</span>
+                        <span id="text">Nun macht man noch eine Probe.</span>
+                        <span id="math-text">\(4\) <i class="ri-close-fill"></i> \(-\frac{1}{2}^2\) <i class="ri-add-fill"></i> \(4\) <i class="ri-close-fill"></i> \(-\frac{1}{2}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Die Terme werden ausgerechnet.</span>
+                        <span id="math-text">\(1\) <i class="ri-add-fill"></i> \(-2\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="text">Dann werden alle Terme addiert.</span>
+                        <span id="math-text">0 = 0 w.A.</span>
+                        <span id="text">Zum Schluss wird wie immer eine Lösungsmenge aufgeschrieben.</span>
+                        <span id="math-text">\(L=\{\)<i class="ri-subtract-fill"></i>\(\frac{1}{2}\}\)</span>
+                    </div>
+                    <span id="text">Wenn unter der Wurzel eine 0 steht, dann gibt es keine Lösung. In diesem Fall ist die der Lösungsweg deutlich kürzer, da man nur den Teil unter der Wurzel ausrechnet, weshalb es sich immer lohnt diesen als erstes auszurechnen.</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit negativer Zahl unter der Wurzel:</span>
+                        <span id="math-text">\(2x^2\) <i class="ri-add-fill"></i> \(-3x\) <i class="ri-add-fill"></i> \(3 = 0\)</span>
+                        <span id="text">Wir setzen in die Mitternachtsformel ein.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+                        <span id="math-text" class="complex">\(x = \frac{-(-3)\pm\sqrt{-3^2 - 4 \times 2\times 3}}{2 \times 2}\)</span>
+                        <span id="text">Nun rechnen wir aus, was unter der Wurzel steht.</span>
+                        <span id="math-text" class="complex">\(x = \frac{-(-3)\pm\sqrt{-15}}{2 \times 2}\) n.l.</span>
+                        <span id="text">Da unter der Wurzel eine negative Wurzel steht schreibt man n.l. (nicht lösbar).</span>
+                        <span id="math-text">\(L=\{\}\)</span>
+                        <span id="text">Als Lösungsmenge gibt man nun eine leere Menge an.</span>
+                    </div>
+                    <span id="text">Hier kannst du noch <button id="text-scroll-link" onclick="scrollto('uebung-mitternachtsformel')">üben</button>.</span>
+                </div>
+            </div>
+            <div class="section" id="p-q">
+                <span id="section-heading">p-q-Formel</span>
+                <div class="section-content">
+                    <span id="text">Die p-q-Forml ist eine verinfachte Version der Mitternachtsformel. Sie lautet:</span>
+                    <span id="math-text" class="complex">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+                    <span id="text">Sie ist zwar weniger komplex, ist aber darauf ausgelegt, dass vor dem x<sup>2</sup> eine 1 steht also in der Gleichung nur x<sup>2</sup>. Die Normalform der quadratischen Gleichung ist also auch abgewandelt.</span>
+                    <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+                    <span id="text">Man sieht, dass vor dem x<sup>2</sup> keine Variable steht. Wenn vor dem x<sup>2</sup> nun doch etwas steht muss man einen anderen Weg benutzen oder die Gleichung so umstellen, dass es passt.</span>
+                    <span id="text">Genau wie bei der Mitternachtsformel gibt es wieder die drei Möglichkeiten einer positiven Zahl, einer 0 oder einer negativen Zahl unter der Wurzel. Diese Fäll verhalten sich genau so wie die der Mitternachtsformel</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit positiver Zahl unter der Wurzel:</span>
+                        <span id="math-text">\(2x^2 + 8x = 10\)</span>
+                        <span id="text">Zuerst muss die Gleichung in die passende Normalform gebracht werden. Man stellt also um.</span>
+                        <span id="math-text">\(2x^2 + 8x = 10\quad\vert-10\)</span>
+                        <span id="text">Zuerst setzen wir die Gleichung = 0.</span>
+                        <span id="math-text">\(2x^2 + 8x -10 = 10 - 10\)</span>
+                        <span id="text">10 und -10 gleichen sich aus, die rechte Seite ist also = 0.</span>
+                        <span id="math-text">\(2x^2 + 8x -10 = 0\)</span>
+                        <span id="text">Vor dem x<sup>2</sup> steht aber noch eine Zahl, also müssen wir noch weiter umstellen.</span>
+                        <span id="math-text">\(2x^2 + 8x -10 = 0\quad\vert\div2\)</span>
+                        <span id="text">Dann passt die Gleichung auch für die p-q-Formel.</span>
+                        <span id="math-text">\(x^2 + 4x -5 = 0\)</span>
+                        <span id="text">Dann setzen wir in die p-q-Formel ein.</span>
+                        <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+                        <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+                        <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{\frac{4}{2}^2-(-5)}\)</span>
+                        <span id="text">Nun rechnen wir zuerst den Teil unter der Wurzel aus.</span>
+                        <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{4+5}\)</span>
+                        <span id="text">Die Zahl unter der Wurzel ist positiv, also haben gibt es zwei Lösungen.</span>
+                        <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{9}\)</span>
+                        <span id="text">Es gibt nun auch zwei x-Werte.</span>
+                        <span id="math-text">\(x = -\frac{4}{2} + 3 \quad\vert\quad x = -\frac{4}{2} - 3\)</span>
+                        <span id="text">Man kann beide Lösungen nun leicht berechnen.</span>
+                        <span id="math-text">\(x_1 = 1 \quad\vert\quad x_2 = -5\)</span>
+                        <span id="text">Eine Probe ist auch bei der p-q-Formel sinnvoll, ob man sie machen muss hängt normalerweise aber an der Aufgabenstellung.</span>
+                        <span id="math-text">\(2 \times 1^2 + 8 \times 1 = 10\)</span>
+                        <span id="text">Die Terme werden ausgerechnet.</span>
+                        <span id="math-text">\(2+8=10\)</span>
+                        <span id="text">Jetzt werden beide Seiten komplett ausgerechnet.</span>
+                        <span id="math-text">\(10 = 10\) w.A.</span>
+                        <span id="text">Genau wie bei der Mitternachtsformel haben wir zwei Lösungen, also auch zwei Proben.</span>
+                        <span id="math-text">\(2 \times -5^2 + 8 \times -5 = 10\)</span>
+                        <span id="text">Alle Terme werden wieder ausgerechnet.</span>
+                        <span id="math-text">\(50 - 40 = 10\)</span>
+                        <span id="text">Dann werden beide Seiten ausgerechnet.</span>
+                        <span id="math-text">\(10 = 10\) w.A.</span>
+                        <span id="text">Nun wird die Lösungsmenge aufgeschrieben, da wir wahre Aussagen haben.</span>
+                        <span id="math-text">\(L=\{1;-5\}\)</span>
+                    </div>
+                    <span id="text">Wie schon bei der Mitternachtsformel gibt es verschiedene Möglichkeit für die Zahl unter der Wurzel, welche einen Einfluss auf die Anzahl der Lösungen haben. Bei einer 0 unter der Wurzel gibt es eine Lösung.</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit 0 unter der Wurzel:</span>
+                        <span id="math-text">\(\frac{1}{2}x^2+\frac{9}{2}=-3x\)</span>
+                        <span id="text">Die Gleichung muss = 0 gesetzt werden.</span>
+                        <span id="math-text">\(\frac{1}{2}x^2+\frac{9}{2}=-3x\quad\vert +3x\)</span>
+                        <span id="text">Die Kenntnisse vom Umstellen von Gleichungen sind wieder praktisch.</span>
+                        <span id="math-text">\(\frac{1}{2}x^2+\frac{9}{2}+3x= 0\)</span>
+                        <span id="text">Wegen des Kommutativgesetzes kann 3x so bewegen, dass es in die Normalform passt.</span>
+                        <span id="math-text">\(\frac{1}{2}x^2+3x+\frac{9}{2}= 0\)</span>
+                        <span id="text">Vor dem x<sup>2</sup> steht \(\frac{1}{2}\), also müssen wir alles <i class="ri-close-fill"></i>2 rechenen, damit eine 1 vor dem x<sup>2</sup>steht und wir die p-q-Formel anwenden können.</span>
+                        <span id="math-text">\(\frac{1}{2}x^2+3x+\frac{9}{2}= 0\quad\vert\times2\)</span>
+                        <span id="text">Vor dem x<sup>2</sup>steht dann nämlich \(\frac{2}{2}\) was gekürzt 1 ist.</span>
+                        <span id="math-text">\(x^2+6x+9=0\)</span>
+                        <span id="text">Nun kann die p-q-Formel angewandt werden.</span>
+                        <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+                        <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+                        <span id="math-text">\(x = -\frac{6}{2} \pm \sqrt{\frac{6}{2}^2-9}\)</span>
+                        <span id="text">Zuerst wird wieder der Teil unter der Wurzel ausgerechnet.</span>
+                        <span id="math-text">\(x = -\frac{6}{2} \pm \sqrt{9-9}\)</span>
+                        <span id="math-text">\(x = -\frac{6}{2} \pm \sqrt{0}\)</span>
+                        <span id="text">Unter der Wurzel steht eine 0 also gibt es eine Lösung für x.</span>
+                        <span id="math-text">\(x = -\frac{6}{2}\)</span>
+                        <span id="text">Es muss nur noch gekürzt werden.</span>
+                        <span id="math-text">\(x = -3\)</span>
+                        <span id="text">Es lohnt sich auch bei einer Lösung eine Probe durchzuführen.</span>
+                        <span id="math-text">\(\frac{1}{2}\times -3^2+\frac{9}{2}=-3\times-3\)</span>
+                        <span id="text">Die Terme werden zuerst ausgerechnet.</span>
+                        <span id="math-text">\(\frac{9}{2}+\frac{9}{2}=9\)</span>
+                        <span id="math-text">\(\frac{1}{2}\times 9+\frac{9}{2}=-3\times-3\)</span>
+                        <span id="text">Dann werden beide Seiten ausgerechnet.</span>
+                        <span id="math-text">\(9 = 9\) w.A.</span>
+                        <span id="text">Zum wird wieder eine Lösungsmenge aufgeschrieben.</span>
+                        <span id="math-text">\(L=\{-3\}\)</span>
+                    </div>
+                    <span id="text">Die letze Möglichkeit ist wieder, dass unter der Wurzel eine negative Zahl steht. In diesem Fall gibt es keine Lösung und die Rechnung endet mit einem n.l. (nicht lösbar).</span>
+                    <div class="example">
+                        <span id="sub-heading">Beispiel mit 0 unter der Wurzel:</span>
+                        <span id="math-text">\(x^2+2x+3=0\)</span>
+                        <span id="text">Wenn die Gleichung schon in der Normalform ist muss nicht umgestellt werden und es kann direkt in die p-q-Formel eingesetzt werden.</span>
+                        <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+                        <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+                        <span id="math-text">\(x=-\frac{2}{2}\pm\sqrt{\frac{2}{2}^2-3}\)</span>
+                        <span id="text">Der Teil unter der Wurzel wird wieder zuerst ausgerechnet.</span>
+                        <span id="math-text">\(x=-\frac{2}{2}\pm\sqrt{1-3}\)</span>
+                        <span id="math-text">\(x=-\frac{2}{2}\pm\sqrt{-2}\) n.l.</span>
+                        <span id="text">Der Teil unter der Wurzel ist negativ, somit ist die Gleichung nicht lösbar und es wird eine leere Menge als Lösungsmenge angegeben.</span>
+                        <span id="math-text">\(L=\{\}\)</span>  
+                    </div>
+                    <span id="text">Hier kannst du noch <button id="text-scroll-link" onclick="scrollto('uebung-p-q')">üben</button>.</span>
+                </div>
+            </div>
+            
+            <div class="section" id="uebung-faktorisieren">
+                <span id="section-heading">Übungen - Faktorisieren</span>
+                <div class="section-content">
+                    <div class="task">
+                        <span id="math-text">\(6x-3x^2+11 = 8\)</span>
+                        <button id="button" onclick="showsolution('solution1-1')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(-x^2+4x+1 = 2x\)</span>
+                        <button id="button" onclick="showsolution('solution1-2')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(-3x+2 = -x^2\)</span>
+                        <button id="button" onclick="showsolution('solution1-3')">Lösung anzeigen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="uebung-mitternachtsformel">
+                <span id="section-heading">Übungen - Mitternachtsformel</span>
+                <div class="section-content">
+                    <div class="task">
+                        <span id="math-text">undefined</span>
+                        <button id="button" onclick="showsolution('solution2-1')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(-x^2+4x+1 = 2x\)</span>
+                        <button id="button" onclick="showsolution('solution2-2')">Lösung anzeigen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="uebung-p-q">
+                <span id="section-heading">Übungen - p-q-Formel</span>
+                <div class="section-content">
+                    <div class="task">
+                        <span id="math-text">\(4x-x^2+10 = -11\)</span>
+                        <button id="button" onclick="showsolution('solution3-1')">Lösung anzeigen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <span id="section-heading">Zusammenfassung</span>
+                <div class="section-content"> 
+                    <span id="text"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+    <div id="solutions" class="solutions">
+        <div id="solution1-1">
+            <div class="closebutton" onlick="hidesolution">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Faktorisieren: Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(-6x-3x^2-11 = 8\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(-6x-3x^2-11 = -8\quad\vert+8\)</span>
+            <span id="math-text">\(-6x-3x^2-3 = 0\)</span>
+            <span id="text">Dann darf vor dem x<sup>2</sup> keine Zahl stehen (also eine 1 die man weglassen kann). Außerdem, darf x<sup>2</sup> auch kein Vorzeichen haben.</span>
+            <span id="math-text">\(-6x-3x^2-3 = 0\quad\vert\div(-3)\)</span>
+            <span id="math-text">\(2x+x^2+1 = 0\)</span>
+            <span id="text">Die Gleichung wird noch in die richtige Reihenfolge gebracht (das ist optional, hilft aber bei der Übersichtlichkeit).</span>
+            <span id="math-text">\(x^2+2x+1 = 0\) </span>
+            <span id="text">Nun wird faktorisiert.</span>
+            <span id="math-text">\((x+1)(x+1) = 0\)</span>
+            <span id="text">Nun wird die Nullregel angewandt. Da in beiden Klammern das gleiche steht, gibt es nur ein Ergebnis.</span>
+            <span id="math-text">\((-1+1)(-1+1) = 0\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(0\times0=0\) w.A.</span>
+            <span id="text">Nun wird die Lösungsmenge aufgeschrieben.</span>
+            <span id="math-text">\(L=\{-1\}\)</span>
+            <span id="text">Jetzt wird eine Probe gemacht.</span>
+            <span id="math-text">\(-6\times(-1)-3\times(-1)^2-11 = 8\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(6-3-11 = 8\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(8 = 8\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird auch hier wieder angegeben.</span>
+            <span id="math-text">\(L=\{-1\}\)</span>
+
+        </div>
+        <div id="solution1-2">
+            <div class="closebutton" onclick="hidesolution('solution1-2')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Faktorisieren: Lösung zur Aufgabe 2</span>
+            <span id="math-text">\(-x^2+3x-2 = 2x\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(-x^2+3x-2 = 2x\quad\vert-2x\)</span>
+            <span id="math-text">\(-x^2+1x-2 = 0\)</span>
+            <span id="text">Dann darf x<sup>2</sup> kein negatives Vorzeichen haben.</span>
+            <span id="math-text">\(-x^2+1x-2 = 0\quad\vert\times(-1)\)</span> 
+            <span id="math-text">\(x^2-1x+2 = 0\)</span>
+            <span id="text">Nun wird die Gleichung faktorisert.</span>
+            <span id="math-text">\((x-1)(x-2) = 0\)</span>
+            <span id="text">Nun wird die Nullregel angewandt.</span>
+            <span id="math-text">\((1-1)(1-2) = 0\quad\vert\quad(2-1)(2-2) = 0\)</span>
+            <span id="math-text">\(0\times-1 = 0\quad\vert\quad1 \times 0 = 0\)</span>
+            <span id="math-text">\(0=0\) w.A.\(\quad\vert\quad 0 = 0\) w.A.</span>
+            <span id="text">Nun wird die Lösungsmenge aufgeschrieben.</span>
+            <span id="math-text">\(L=\{1;2\}\)</span>
+            <span id="text">Jetzt wird eine Probe gemacht.</span>
+            <span id="math-text">\(-1^2+3\times1-2 = 2\times(-1)\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(-1-3-2 = -2\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">-6 = -2</span>
+            <span id="text"></span>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="solution3-1">
+            <div class="closebutton" onclick="hidesolution('solution3-1')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">p-q-Formel: Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(4x-x^2+10 = -11\)</span>
+            <span id="text">Zuerst wird das Kommutativgesetz genutzt, um die Terme zu tauschen.</span>
+            <span id="math-text">\(-x^2+4x+10 = 11\)</span>
+            <span id="text">Dann wird die Gleichung = 0 gesetzt.</span>
+            <span id="math-text">\(-x^2+4x+10 = -11\quad\vert+11\)</span>
+            <span id="text">Dann ist die Gleichung ber noch nicht in der Normalform für die p-q-Formel, da x<sup>2</sup> ein negatives Vorzeichen hat. Das ändert man indem man <i class="ri-close-fill"></i>(<i class="ri-subtract-fill"></i>1) rechnet.</span>
+            <span id="math-text">\(-x^2+4x+21 = 0\quad\vert\times(-1)\)</span>
+            <span id="text">Nun steht vor dem x<sup>2</sup> nichts mehr, aber die anderen Vorzeichen wurden auch verändert.</span>
+            <span id="math-text">\(x^2-4x-21 = 0\)</span>
+            <span id="text">Jetzt kann man in die p-q-Formel einsetzen. Zur Hilfe nochmal die p-q-Formel und die Normalform für die p-q-Formel.</span>
+            <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+            <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{\frac{-4}{2}^2-(-21)}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird ausgerechnet.</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{2^2+21}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{25}\)</span>
+            <span id="text">Der Wert ist positiv, also gibt es zwei Lösungen und in zwei Wegen weiter ausgerechnet.</span>
+            <span id="math-text">\(x_1 = 2 + 5\quad\vert\quad x_2 = 2 - 5\)</span>
+            <span id="math-text">\(x_1 = 7\quad\vert\quad x_2 = -3\)</span>
+            <span id="text">Nun werden noch die Proben durchgeführt.</span>
+            <span id="math-text">\(4\times7-7^2+10 = -11\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(28-49+10 = -11\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(4\times(-3)-(-3)^2+10 = -11\)</span>
+            <span id="text">Die Terme werden wirder ausgerechnet.</span>
+            <span id="math-text">\(-12-9+10 = -11\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Zum Schluss wird noch die Lösungsmenge angegeben.</span>
+            <span id="math-text">\(L=\{7;-3\}\)</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-sections">
+            <div class="infos">
+                <span id="headline">Kontakt & Support</span>
+                <div class="item">
+                    <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
+                </div>
+                <div class="item">
+                    <span id="type">Discord:</span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+            <div class="infos">
+                <span id="headline">Soziale Medien</span>
+                <div class="item">
+                    <span id="type">Instagram: </span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
+                </div>
+            </div>
+        </div>
+        <div class="footertext-container">
+            <span id="footertext">&copy; 2025 nanvro.de - Special thanks to</span>
+            <a id="fooble-link" href="https://fooble.dev" target="_blank">Fooble</a>
+            <span id="footertext">for design ideas and support.</span>
+        </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+    <script src="loesung.js"></script>
+</body>
+</html>

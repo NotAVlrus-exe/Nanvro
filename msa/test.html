@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Blur außer ein Element</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .content {
+      position: relative;
+      z-index: 0;
+      padding: 20px;
+    }
+
+    .blur-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(8px);
+      z-index: 1;
+      pointer-events: none; /* Damit Klicks durchgehen, falls nötig */
+    }
+
+    .focused-element {
+      position: relative;
+      z-index: 2; /* Höher als das Overlay */
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: fit-content;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Übriger Inhalt</h1>
+    <p>Das hier wird verschwommen angezeigt.</p>
+    <p>Noch mehr Inhalt...</p>
+  </div>
+
+  <!-- Das ist das fokussierte (nicht geblurte) Element -->
+  <div class="focused-element">
+    <h2>Ich bleibe scharf!</h2>
+    <p>Alle anderen Elemente werden geblurt.</p>
+  </div>
+
+  <!-- Overlay, das alles außer dem obigen Element blurriert -->
+  <div class="blur-overlay"></div>
+</body>
+</html>
