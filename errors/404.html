@@ -43,8 +43,9 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
 
-    <title>MSA Vorbereitung - Übersicht</title>
+    <title>Nanvro - 404 Error</title>
 </head>
+
 <body>
     <nav>
         <a class="logo" href="/" title="Startseite">
@@ -52,10 +53,10 @@
         </a>
         <div class="nav-items">
             <ul>
-                <li>
+                <li class="selected">
                     <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
                 </li>
-                <li class="selected">
+                <li>
                     <a href="/math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
                 </li>
             </ul>
@@ -66,43 +67,12 @@
         </button>
     </nav>
     <main>
-        <div class="overview">
-            <div class="section">
-                <div class="section-title">Gleichungen</div>
-                <div class="links">
-                    <div class="link-container">
-                        <div class="left">
-                            <span id="description">lineare Gleichungen</span>
-                            <span id="tasktype">\(ax\) <i class="ri-add-fill"></i> \(b = c\)</span>
-                        </div>
-                        <div class="right">
-                            <button id=button onclick="sendto('lineare-gleichungen')">Starten</button>
-                        </div>
-                    </div>
-                    <div class="link-container">
-                        <div class="left">
-                            <span id="description">quadratische Gleichungen</span>
-                            <span id="tasktype">\(ax\)<sup>2</sup> <i class="ri-add-fill"></i> \(bx\) <i class="ri-add-fill"></i> \(c = 0\)</span>
-                        </div>
-                        <div class="right">
-                            <button id=button onclick="sendto('quadratische-gleichungen')">Starten</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="error-content">
+            <div class="error-container">
+                <span id="error">404</span>
+                <span id="error-descripition">Not found</span>
+                <button id="button" onclick="sendto(' ')">Zurück zur Startseite</button>
             </div>
-            <div class="section">
-                <div class="section-title">Gleichungssysteme</div>
-                <div class="links">
-                    <div class="link-container">
-                        <div class="left">
-                            <span id="description">Coming soon...</span>
-                            <span id="tasktype">Coming soon...</span>
-                        </div>
-                        <div class="right">
-                        </div>
-                    </div>
-                </div>
-
         </div>
     </main>
     <footer>
@@ -120,6 +90,7 @@
             <span id="footertext">for design ideas and support.</span>
         </div>
     </footer>
-    <script src="/assets/js/main.js"></script>
 </body>
+<script src="/assets/js/main.js"></script>
+
 </html>

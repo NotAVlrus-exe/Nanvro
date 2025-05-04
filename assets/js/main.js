@@ -67,7 +67,11 @@ function setValues(mathtype, min1, max1, min2, max2) {
 }
 
 function sendto(location) {
-    window.location.href = location+".html";
+    if (location != ' ') {
+        window.location.href = location+".html";
+    } else {
+        window.location.href = "/";
+    }
 }
 
 function scrollto(location) {

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--IOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nanvro">
+    <!--Mobile-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="transparent">
+    <meta name="mobile-web-app-title" content="Nanvro">
+
+    <meta name="theme-color" content="rgb(20,20,20)">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/nanvro-icon-bg-transparent.ico" />
+    <link rel="apple-touch-icon" href="assets/images/nanvro-logo-bg-transparent.png" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+            },
+            startup: { typeset: true },
+            options: {
+                renderActions: {
+                    addMenu: [],
+                },
+            }
+        };
+    </script>
+    <script src="/assets/js/tex-svg.js" async></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <title>Nanvro - Übungen</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="/" title="Startseite">
+            <img src="assets/images/nanvro-logo-bg-transparent.png" alt="Logo" />
+        </a>
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a href="/"><i class="ri-home-4-line"></i>Startseite</a>
+                </li>
+                <li class="selected">
+                    <a href="math.html"><i class="ri-graduation-cap-line"></i>Mathe</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="theme-btn" onclick="switchTheme()">
+            <i class="ri-sun-line"></i>
+        </button>
+    </nav>
+
+    <main>
+        <div class="selection-container">
+            <!--plusrechnen-->
+            <div class="section">
+                <div class="section-title">
+                    <i class="ri-add-fill"></i>
+                </div>
+                <div class="links">
+                    <!--1+1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<i class="ri-add-fill"></i>1</span>
+                            <span id="tasktype">Plusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('plus',1,10,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10+1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-add-fill"></i>1</span>
+                            <span id="tasktype">Plusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('plus',11,100,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10+10-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-add-fill"></i>10</span>
+                            <span id="tasktype">Plusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('plus',11,100,11,100)">Starten</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--section: pluscontainer-->
+
+            <!--minusrechnen-->
+            <div class="section">
+                <div class="section-title">
+                    <i class="ri-subtract-fill"></i>
+                </div>
+                <div class="links">
+                    <!--1-1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<i class="ri-subtract-fill"></i>1</span>
+                            <span id="tasktype">Minusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('minus',1,10,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10-1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-subtract-fill"></i>1</span>
+                            <span id="tasktype">Minusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('minus',11,100,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10-10-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-subtract-fill"></i>10</span>
+                            <span id="tasktype">Minusaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('minus',11,100,11,100)">Starten</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--section: minuscontainer-->
+
+            <div class="section">
+
+                <div class="section-title">
+                    <i class="ri-close-fill"></i>
+                </div>
+                <div class="links">
+                    <!--1x1 Feld -->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<i class="ri-close-fill"></i>1</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',1,10,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10x1 (leicht) Feld -->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-close-fill"></i>1 (leicht)</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',11,20,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10x1 (schwer) Feld -->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-close-fill"></i>1 (schwer)</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',11,100,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10x10 (leicht) Feld -->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-close-fill"></i>10 (leicht)</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',11,20,11,20)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10x10 (schwer) Feld -->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-close-fill"></i>10 (schwer)</span>
+                            <span id="tasktype">Malaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <button id=button onclick="setValues('mal',11,100,11,100)">Starten</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--section: malcontainer-->
+            <!--geteilt-->
+            <div class="section">
+                <div class="section-title">
+                    <i class="ri-divide-fill"></i>
+                </div>
+                <div class="links">
+                    <!--1/1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<i class="ri-divide-fill"></i>1</span>
+                            <span id="tasktype">Geteiltaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('geteilt',1,10,1,10)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10/1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<i class="ri-divide-fill"></i>1</span>
+                            <span id="tasktype">Geteiltaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('geteilt',1,10,1,100)">Starten</button> <!--10/1-->
+                        </div>
+                    </div> <!--10/1-->
+                </div>
+            </div> <!--section: geteiltcontainer-->
+            <!--Potenzcontainer-->
+            <div class="section">
+                <div class="section-title">
+                    <span>\(\square\)<sup>\(\square\)</sup></span> <!--Square from MathJax-->
+                </div>
+                <div class="links">
+                    <!--1^1-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">1<sup>2</sup></span>
+                            <span id="tasktype">Potenzaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('potenz',1,10,2,2)">Starten</button>
+                        </div>
+                    </div>
+
+                    <!--10^2-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">10<sup>2</sup></span>
+                            <span id="tasktype">Potenzaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('potenz',11,20,2,2)">Starten</button>
+                        </div>
+                    </div> <!--10/1-->
+
+                    <!--1^3-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description"><span id="description">1<sup>3</sup></span></span>
+                            <span id="tasktype">Potenzaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('potenz',1,10,3,3)">Starten</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--section: Potenzcontainer-->
+            <div class="section"> <!--Wurzelcontainer-->
+                <div class="section-title">
+                    <span id="sqrt-title">\(\sqrt{\phantom{1}}\)</span> <!--Square from MathJax-->
+                </div>
+                <div class="links">
+                    <!--100^2-->
+                    <div class="link-container">
+                        <div class="left">
+                            <span id="description">\(\sqrt{100}\)</span>
+                            <span id="tasktype">Wurzelaufgaben</span>
+                        </div>
+                        <div class="right">
+                            <div class="difficulty">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <button id=button onclick="setValues('wurzel',1,1000,2,2)">Starten</button>
+                        </div>
+                    </div> <!--100^1/2-->
+
+                </div>
+            </div> <!--section: Wurzelcontainer-->
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-sections">
+            <div class="infos">
+                <span id="headline">Kontakt & Support</span>
+                <div class="item">
+                    <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
+                </div>
+            </div>
+        </div>
+        <div class="footertext-container">
+            <span id="footertext">&copy; 2025 nanvro.de - Special thanks to</span>
+            <a id="fooble-link" href="https://fooble.dev" target="_blank">Fooble</a>
+            <span id="footertext">for design ideas and support.</span>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+
+</html>

@@ -781,6 +781,11 @@ main .content .section .section-content {
     border-radius: var(--br-default);
 }
 
+.content #text {
+    font-size: 1rem;
+    color: var(--color-fg);
+    text-align: center;
+}
 #math-text {
     font-size: 1.2rem;
     color: var(--color-fg-accent);
@@ -817,6 +822,13 @@ main .content .section .section-content .task #button {
     width: fit-content;
 }
 
+main .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
 .solutions {
     position: fixed;
@@ -891,7 +903,40 @@ main .content .section .section-content .task #button {
 
 
 
+.error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 
+.error-content .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: auto;
+    max-width: 95%;
+    height: 100%;
+    margin-top: 100px;
+    background-color: var(--color-bg-secondary);
+    padding: 30px 10%;
+    border-radius: var(--br-pill);
+}
+
+.error-content .error-container #error {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.error-content .error-container #error-descripition {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-fg-accent);
+}
 
 
 
@@ -903,9 +948,6 @@ main .content .section .section-content .task #button {
     }
     main .selection-container, main .overview{
         width: 80%;
-    }
-    main .content {
-        width: 75%;
     }
     .solutions > * {
         width: 60%;
@@ -922,6 +964,20 @@ main .content .section .section-content .task #button {
         display: flex;
         flex-direction: column;
     }
+
+    main .content {
+        width: 80%;
+    }
+    main .content .section .section-content {
+        padding: 25px;
+    }
+
+    main .content .section .section-content .example {
+        width: 85%;
+        padding: 10px
+    }
+
+
 }
 @media (max-width: 850px) {
     nav {
@@ -959,6 +1015,44 @@ main .content .section .section-content .task #button {
     main .update-log .log .update {
         height: 100px;
     }
+
+    main .overview .section .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .solutions > * {
+        width: 80%;
+    }
+
+    main .content {
+        width: 90%;
+    }
+
+    main .content .section .section-content .example {
+        width: 90%;
+    }
+
+    .content #text {
+        font-size: 0.8rem;
+    }
+
+    main .content .section {
+        padding: 15px 15px 80px 15px
+    }
+
+    main .content .section .section-content {
+        padding: 5px;
+    }
+
+    #math-text {
+        font-size: 0.7rem;
+    }
+    
+    #math-text.complex {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1048,6 +1142,33 @@ main .content .section .section-content .task #button {
         gap:75px;
     }
     main .taskcontainer .maintask .upper #text {
+        font-size: 1rem;
+    }
+
+    
+    .solutions > * {
+        width: 90%;
+    }
+
+    main .content .section .section-content .example {
+        width: 95%;
+    }
+
+    .content #text {
+        font-size: 0.8rem;
+    }
+
+    main .content .section {
+        padding: 15px 15px 80px 15px
+    }
+
+    main .content .section .section-content {
+        padding: 5px;
+    }
+
+    
+    
+    #math-text.complex {
         font-size: 1rem;
     }
 }

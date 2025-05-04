@@ -9,10 +9,10 @@
         <meta name="apple-mobile-web-app-title" content="Nanvro">
         <!--Mobile-->
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="mobile-web-app-status-bar-style" content="transparent">
         <meta name="mobile-web-app-title" content="Nanvro">
     
-        <meta name="theme-color" content="black">
+        <meta name="theme-color" content="rgb(20,20,20)">
     
         <!-- Favicon -->
         <link rel="icon" href="/assets/images/nanvro-icon-bg-transparent.ico" />
@@ -42,7 +42,7 @@
         <link rel="stylesheet" href="/assets/css/style.css" />
         <link rel="stylesheet" href="/assets/css/reset.css" />
     
-        <title>Nanvro - Gleichungen</title>
+        <title>Nanvro - qudratische Gleichungen</title>
     </head>
 <body>
     <nav>
@@ -102,7 +102,7 @@
                         <span id="math-text">\((x\times x)+(x\times3)+(2\times x)\) + \((2\times3)\)</span>
                         <span id="text">Wenn man das wieder vereinfacht kommt man auf die Normalform.</span>
                         <span id="text">in der Gleichung mit den Klammern muss nun ein Faktor 0 sein, damit die Gleichung wahr ist, da alles <i class="ri-close-fill"></i> 0 = 0. Also muss in einer Klammer 0 rauskommen.</span>
-                        <span id="math-text">\((-2+2)\)\((-2+3) = 0 \quad\vert\quad(-3+2)(-3+3) = 0\)</span>
+                        <span id="math-text">\((-2+2)(-2+3) = 0 \quad\vert\quad\)\((-3+2)(-3+3) = 0\)</span>
                         <span id="text">Wenn man nun beide möglichen Lösungen vereinfacht und zusammenfasst ist ein Faktor 0.</span>
                         <span id="math-text">\(0\times1 = 0\quad\vert\quad-1\times0 = 0\)</span>
                         <span id="text">Wenn man diese dann fertig ausrechnet erhält man zwei wahre Aussagen.</span>
@@ -157,21 +157,21 @@
                         <div id="text">Dann kann noch gekürzt werden.</div>
                         <span id="math-text" class="complex">\(x_1 = -\frac{1}{3}\quad\) | \(\quad x_2 = -1\)</span>
                         <span id="text">Hier ist es meistens sinnvoll Proben zu machen, da sich bei lösen einer komplexen Gleichung schnell Fehler einschleichen.</span>
-                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(-\frac{1}{3}^2\) <i class="ri-add-fill"></i> \(4\) <i class="ri-close-fill"></i> \(-\frac{1}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="math-text">\(3\times(-\frac{1}{3})^2 + 4\times(-\frac{1}{3})\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
                         <span id="text">Wir lösen zuerst die einzelnen Terme.</span>
-                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(\frac{1}{9}\) <i class="ri-add-fill"></i> \(-\frac{4}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="math-text">\(3\times\frac{1}{9}+(-\frac{4}{3}) + 1 = 0\)</span>
                         <span id="text">Für die Übersichtlichkeit mach wir es in zwei Schritten.</span>
-                        <span id="math-text">\(\frac{1}{3}\) <i class="ri-add-fill"></i> \(-\frac{4}{3}\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="math-text">\(\frac{1}{3}-\frac{4}{3} + 1 = 0\)</span>
                         <span id="text">Nun addieren wir alle Terme zusammen.</span>
                         <span id="math-text">\(0 = 0\) w.A.</span>
                         <span id="text">Wir haben aber zwei Lösungen, also müssen wir auch zwei Proben machen.</span>
-                        <span id="math-text">\(3\) <i class="ri-close-fill"></i> \(-1^2\) <i class="ri-add-fill"></i> \(4\) <i class="ri-close-fill"></i> \(-1\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="math-text">\(3\times(-1)^2 + 4\times(-1)+1 = 0\)</span>
                         <span id="text">Wir rechnen wiede die Terme aus.</span>
-                        <span id="math-text">\(3\) <i class="ri-add-fill"></i> \(-4\) <i class="ri-add-fill"></i> \(1 = 0\)</span>
+                        <span id="math-text">\(3+(-4)+1 = 0\)</span>
                         <span id="text">Nun addieren wir alle Terme zusammen.</span>
                         <span id="math-text">\(0 = 0\) w.A.</span>
                         <span id="text">Als letztes wird wieder eine Lösungsmenge angegeben.</span>
-                        <span id="math-text">\(L=\{\)<i class="ri-subtract-fill"></i>\(1;\)<i class="ri-subtract-fill"></i>\(\frac{1}{3}\}\)</span>
+                        <span id="math-text">\(L=\{-1;-\frac{1}{3}\}\)</span>
                     </div>
                     <span id="text">Nun kann es aber passieren, dass unter der Wurzel eine 0 herauskommt. Dann gibt es nur eine Lösung. Das heißt man braucht auch nur eine Probe.</span>
                     <div class="example">
@@ -235,7 +235,7 @@
                         <span id="math-text">\(x = x^2 + px + q = 0\)</span>
                         <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
                         <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{\frac{4}{2}^2-(-5)}\)</span>
-                        <span id="text">Nun rechnen wir zuerst den Teil unter der Wurzel aus.</span>
+                        <span id="text">Nun rechnen wir zuerst den Teil unter der Wurzel aus. Dieser wird auch Diskriminante gennant.</span>
                         <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{4+5}\)</span>
                         <span id="text">Die Zahl unter der Wurzel ist positiv, also haben gibt es zwei Lösungen.</span>
                         <span id="math-text">\(x = -\frac{4}{2} \pm \sqrt{9}\)</span>
@@ -333,12 +333,16 @@
                 <span id="section-heading">Übungen - Mitternachtsformel</span>
                 <div class="section-content">
                     <div class="task">
-                        <span id="math-text">undefined</span>
+                        <span id="math-text">\(2x^2+6=8x\)</span>
                         <button id="button" onclick="showsolution('solution2-1')">Lösung anzeigen</button>
                     </div>
                     <div class="task">
-                        <span id="math-text">\(-x^2+4x+1 = 2x\)</span>
+                        <span id="math-text">\(x^2+4x+1 = 2x\)</span>
                         <button id="button" onclick="showsolution('solution2-2')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(x^2-4x-6=-x^2\)</span>
+                        <button id="button" onclick="showsolution('solution2-3')">Lösung anzeigen</button>
                     </div>
                 </div>
             </div>
@@ -350,14 +354,37 @@
                         <span id="math-text">\(4x-x^2+10 = -11\)</span>
                         <button id="button" onclick="showsolution('solution3-1')">Lösung anzeigen</button>
                     </div>
+                    <div class="task">
+                        <span id="math-text">\(x^2-5x+9 = 3\)</span>
+                        <button id="button" onclick="showsolution('solution3-2')">Lösung anzeigen</button>
+                    </div>
+                    <div class="task">
+                        <span id="math-text">\(x^2+2x+3=0\)</span>
+                        <button id="button" onclick="showsolution('solution3-3')">Lösung anzeigen</button>
+                    </div>
+
                 </div>
+                
             </div>
 
             <div class="section">
                 <span id="section-heading">Zusammenfassung</span>
                 <div class="section-content"> 
-                    <span id="text"></span>
+                    <span id="text">Quadratische Gleichungen können auf viele Wege gelöst werden, bspw. Faktorisieren, wo die Gleichung auf zwei Klammern aufgeteilt wird und die Lösungsmengen mit der Nullregel bestimmt werden. Außerdem gibt es noch</span>
+                    <span id="text">die Mitternachtsformel:</span>
+                    <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+                    <span id="text">und die p-q-Formel:</span>
+                    <span id="math-text" class="complex">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+                    <span id="text">Die Mitternachtsformel ist eine Formel die zwar schwer zu merken ist, aber dafür auch bei komplexen Aufgaben funktioniert. Die p-q-Formel ist eine vereinfachte Version der Mitternachtsformel, die nur funktioniert, wenn die quadratische Zahl mit keiner anderen multipliziert wird.</span>
+                    <span id="text">Man sollte bei den beiden Formel immer zuerst den Teil unter der Wurzel ausrechnen, dieser bestimmt, ob es zwei Lösungen (bei einer positiven Zahl unter der Wurzel), eine Lösung (bei einer 0 unter der Wurzel) oder gar keine Lösung (bei einer negativen Zahl unter der Wurzel) gibt. Wenn es keine Lösung gibt kann man das Lösen beenden.</span>
+                    <span id="text">Zum Abschluss einer Aufgabe gibt man die Lösungsmenge an, welche alle möglichen Zahlen enthält die man für x einsetzen kann. Bei keiner Lösung ist es eine leere Menge (\(L=\{\}\)).</span>
+                    
                 </div>
+            </div>
+            <div class="buttons">
+                <button id="button" onclick="sendto('lineare-gleichungen')"> <i class="ri-arrow-left-fill"></i> Zurück</button>
+                <button id="button" onclick="sendto('overview')">Übersicht</button>
+                <button id="button" onclick="alert('Die Seite existiert noch nicht!')">Weiter <i class="ri-arrow-right-fill"></i></button>
             </div>
         </div>
     </main>
@@ -414,41 +441,144 @@
             <span id="text">Dann darf x<sup>2</sup> kein negatives Vorzeichen haben.</span>
             <span id="math-text">\(-x^2+1x-2 = 0\quad\vert\times(-1)\)</span> 
             <span id="math-text">\(x^2-1x+2 = 0\)</span>
-            <span id="text">Nun wird die Gleichung faktorisert.</span>
-            <span id="math-text">\((x-1)(x-2) = 0\)</span>
+            <span id="text">Man kann die Gleichung nicht faktorisieren, da es kein Zahlenpaar gibt, welches addiert -1 und multipliziert 2 ergibt.</span>
+            <span id="math-text">In diesem Fall ist das Faktorisieren nicht möglich. Man müsste eine andere Methode verwenden, um die Gleichung zu lösen.</span>
+        </div>
+
+        <div id="solution1-3">
+            <div class="closebutton" onclick="hidesolution('solution1-3')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Faktorisieren: Lösung zur Aufgabe 3</span>
+            <span id="math-text">\(3x+2 = -x^2\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(3x+2 = -x^2\quad\vert+x^2\)</span>
+            <span id="math-text">\(x^2+3x+2 = 0\)</span>
+            <span id="text">Nun wird faktorisiert.</span>
+            <span id="math-text">\((x+1)(x+2) = 0\)</span>
             <span id="text">Nun wird die Nullregel angewandt.</span>
-            <span id="math-text">\((1-1)(1-2) = 0\quad\vert\quad(2-1)(2-2) = 0\)</span>
-            <span id="math-text">\(0\times-1 = 0\quad\vert\quad1 \times 0 = 0\)</span>
-            <span id="math-text">\(0=0\) w.A.\(\quad\vert\quad 0 = 0\) w.A.</span>
-            <span id="text">Nun wird die Lösungsmenge aufgeschrieben.</span>
-            <span id="math-text">\(L=\{1;2\}\)</span>
-            <span id="text">Jetzt wird eine Probe gemacht.</span>
-            <span id="math-text">\(-1^2+3\times1-2 = 2\times(-1)\)</span>
+            <span id="math-text">\((x_1+1) = 0\quad\vert\quad(x_2+2) = 0\)</span>
+            <span id="math-text">\(x_1 = -1\quad\vert\quad x_2 = -2\)</span>
+            <span id="text">Jetzt werden die Proben gemacht.</span>
+            <span id="math-text">\(3\times(-1)+2 = -(-1)^2\)</span>
             <span id="text">Die Terme werden ausgerechnet.</span>
-            <span id="math-text">\(-1-3-2 = -2\)</span>
+            <span id="math-text">\(-3+2 = -1\)</span>
             <span id="text">Dann werden die Terme zusammengefasst.</span>
-            <span id="math-text">-6 = -2</span>
-            <span id="text"></span>
+            <span id="math-text">\(-1 = -1\) w.A.</span>
+            <span id="text">Die andere Probe wird auch gemacht.</span>
+            <span id="math-text">\(3\times(-2)+2 = -(-2)^2\)</span>
+            <span id="text">Die Terme werden wieder ausgerechnet.</span>
+            <span id="math-text">\(-6+2 = -4\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(-4 = -4\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{-1;-2\}\)</span>
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div id="solution2-1">
+            <div class="closebutton" onclick="hidesolution('solution2-1')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Mitternachtsformel: Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(2x^2+6=8x\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(2x^2+6=8x\quad\vert-8x\)</span>
+            <span id="math-text">\(2x^2-8x+6=0\)</span>
+            <span id="text">Nun wird die Mitternachtsformel eingesetzt.</span>
+            <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+            <span id="math-text" class="complex">\(x = \frac{-(-8)\pm\sqrt{(-8)^2 - 4 \times 2\times 6}}{2 \times 2}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird zuerst ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x = \frac{8\pm\sqrt{64-48}}{4}\)</span>
+            <span id="text">Unter der Wurzel steht eine positive Zahl, es gibt also zwei Lösungen</span>
+            <span id="math-text" class="complex">\(x = \frac{8\pm\sqrt{16}}{4}\)</span>
+            <span id="text">Nun wird die Wurzel ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{8+4}{4}\quad\vert\quad x_2 = \frac{8-4}{4}\)</span>
+            <span id="text">Nun wird alles ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{12}{4}\quad\vert\quad x_2 = \frac{4}{4}\)</span>
+            <span id="text">Es kann noch gekürzt werden.</span>
+            <span id="math-text">\(x_1 = 3\quad\vert\quad x_2 = 1\)</span>
+            <span id="text">Nun wird die Probe gemacht.</span>
+            <span id="math-text">\(2\times3^2+6=8\times3\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(18+6=24\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(24=24\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(2\times1^2+6=8\times1\)</span>
+            <span id="text">Die Terme werden wieder ausgerechnet.</span>
+            <span id="math-text">\(2+6=8\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(8=8\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{1;3\}\)</span>
+        </div>
+        <div id="solution2-2">
+            <div class="closebutton" onclick="hidesolution('solution2-2')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Mitternachtsformel: Lösung zur Aufgabe 2</span>
+            <span id="math-text">\(x^2+4x+1=2x\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(x^2+4x+1=2x\quad\vert-2x\)</span>
+            <span id="math-text">\(x^2+2x+1=0\)</span>
+            <span id="text">Nun wird in die Mitternachtsformel eingesetzt.</span>
+            <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+            <span id="math-text" class="complex">\(x = \frac{-2\pm\sqrt{2^2 - 4 \times 1\times 1}}{2 \times 1}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird zuerst ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x = \frac{-2\pm\sqrt{4-4}}{2}\)</span>
+            <span id="text">Unter der Wurzel steht eine 0, es gibt also eine Lösung.</span>
+            <span id="math-text" class="complex">\(x = \frac{-2\pm\sqrt{0}}{2}\)</span>
+            <span id="text">Die Wurzel kann nun ignoriert werden, da die Wurzel aus 0 = 0 ist. Es kann weiter ausgerechnet werden.</span>
+            <span id="math-text">\(x = \frac{-2}{2}\)</span>
+            <span id="text">Nun wird noch gekürzt.</span>
+            <span id="math-text">\(x = -1\)</span>
+            <span id="text">Nun wird die Probe gemacht.</span>
+            <span id="math-text">\((-1)^2+4\times(-1)+1=2\times(-1)\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(1-4+1=-2\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(-2=-2\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{-1\}\)</span>
+        </div>
+        <div id="solution2-3">
+            <div class="closebutton" onclick="hidesolution('solution2-3')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">Mitternachtsformel: Lösung zur Aufgabe 2</span>
+            <span id="math-text">\(x^2-4x-6=-x^2\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(x^2-4x-6=-x^2\quad\vert+x^2\)</span>
+            <span id="math-text">\(2x^2-4x-6=0\)</span>
+            <span id="text">Nun wird wieder in die Mitternachtsformel eingesetzt.</span>
+            <span id="math-text" class="complex">\(x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\)</span>
+            <span id="math-text" class="complex">\(x = \frac{-(-4)\pm\sqrt{(-4)^2 - 4 \times 2\times (-6)}}{2 \times 2}\)</span>
+            <span id="text">Die Diskriminante wird zuerst ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x = \frac{4\pm\sqrt{16+48}}{4}\)</span>
+            <span id="text">Unter der Wurzel steht eine positive Zahl, es gibt also zwei Lösungen.</span>
+            <span id="math-text" class="complex">\(x = \frac{4\pm\sqrt{64}}{4}\)</span>
+            <span id="text">Nun wird die Wurzel ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{4+8}{4}\quad\vert\quad x_2 = \frac{4-8}{4}\)</span>
+            <span id="text">Nun wird der Rest ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{12}{4}\quad\vert\quad x_2 = \frac{-4}{4}\)</span>
+            <span id="text">Es kann noch gekürzt werden.</span>
+            <span id="math-text">\(x_1 = 3\quad\vert\quad x_2 = -1\)</span>
+            <span id="text">Nun wird die Probe gemacht.</span>
+            <span id="math-text">\((-1)^2-4\times(-1)-6=-(-1)^2\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(1+4-6=-1\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(-1=-1\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(3^2-4\times3-6=-3^2\)</span>
+            <span id="text">Die Terme werden wieder ausgerechnet.</span>
+            <span id="math-text">\(9-12-6=-9\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(-9=-9\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{-1;3\}\)</span>
+        </div>
 
 
         <div id="solution3-1">
@@ -490,29 +620,160 @@
             <span id="text">Zum Schluss wird noch die Lösungsmenge angegeben.</span>
             <span id="math-text">\(L=\{7;-3\}\)</span>
         </div>
+        <div id="solution3-1">
+            <div class="closebutton" onclick="hidesolution('solution3-1')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">p-q-Formel: Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(4x-x^2+10 = -11\)</span>
+            <span id="text">Zuerst wird das Kommutativgesetz genutzt, um die Terme zu tauschen.</span>
+            <span id="math-text">\(-x^2+4x+10 = 11\)</span>
+            <span id="text">Dann wird die Gleichung = 0 gesetzt.</span>
+            <span id="math-text">\(-x^2+4x+10 = -11\quad\vert+11\)</span>
+            <span id="text">Dann ist die Gleichung ber noch nicht in der Normalform für die p-q-Formel, da x<sup>2</sup> ein negatives Vorzeichen hat. Das ändert man indem man <i class="ri-close-fill"></i>(<i class="ri-subtract-fill"></i>1) rechnet.</span>
+            <span id="math-text">\(-x^2+4x+21 = 0\quad\vert\times(-1)\)</span>
+            <span id="text">Nun steht vor dem x<sup>2</sup> nichts mehr, aber die anderen Vorzeichen wurden auch verändert.</span>
+            <span id="math-text">\(x^2-4x-21 = 0\)</span>
+            <span id="text">Jetzt kann man in die p-q-Formel einsetzen. Zur Hilfe nochmal die p-q-Formel und die Normalform für die p-q-Formel.</span>
+            <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+            <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{\frac{-4}{2}^2-(-21)}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird ausgerechnet.</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{2^2+21}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{25}\)</span>
+            <span id="text">Der Wert ist positiv, also gibt es zwei Lösungen und in zwei Wegen weiter ausgerechnet.</span>
+            <span id="math-text">\(x_1 = 2 + 5\quad\vert\quad x_2 = 2 - 5\)</span>
+            <span id="math-text">\(x_1 = 7\quad\vert\quad x_2 = -3\)</span>
+            <span id="text">Nun werden noch die Proben durchgeführt.</span>
+            <span id="math-text">\(4\times7-7^2+10 = -11\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(28-49+10 = -11\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(4\times(-3)-(-3)^2+10 = -11\)</span>
+            <span id="text">Die Terme werden wirder ausgerechnet.</span>
+            <span id="math-text">\(-12-9+10 = -11\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Zum Schluss wird noch die Lösungsmenge angegeben.</span>
+            <span id="math-text">\(L=\{7;-3\}\)</span>
+        </div>
+        
+        <div id="solution3-1">
+            <div class="closebutton" onclick="hidesolution('solution3-1')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">p-q-Formel: Lösung zur Aufgabe 1</span>
+            <span id="math-text">\(4x-x^2+10 = -11\)</span>
+            <span id="text">Zuerst wird das Kommutativgesetz genutzt, um die Terme zu tauschen.</span>
+            <span id="math-text">\(-x^2+4x+10 = 11\)</span>
+            <span id="text">Dann wird die Gleichung = 0 gesetzt.</span>
+            <span id="math-text">\(-x^2+4x+10 = -11\quad\vert+11\)</span>
+            <span id="text">Dann ist die Gleichung ber noch nicht in der Normalform für die p-q-Formel, da x<sup>2</sup> ein negatives Vorzeichen hat. Das ändert man indem man <i class="ri-close-fill"></i>(<i class="ri-subtract-fill"></i>1) rechnet.</span>
+            <span id="math-text">\(-x^2+4x+21 = 0\quad\vert\times(-1)\)</span>
+            <span id="text">Nun steht vor dem x<sup>2</sup> nichts mehr, aber die anderen Vorzeichen wurden auch verändert.</span>
+            <span id="math-text">\(x^2-4x-21 = 0\)</span>
+            <span id="text">Jetzt kann man in die p-q-Formel einsetzen. Zur Hilfe nochmal die p-q-Formel und die Normalform für die p-q-Formel.</span>
+            <span id="math-text">\(x = x^2 + px + q = 0\)</span>
+            <span id="math-text">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{\frac{-4}{2}^2-(-21)}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird ausgerechnet.</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{2^2+21}\)</span>
+            <span id="math-text">\(x = -\frac{-4}{2} \pm \sqrt{25}\)</span>
+            <span id="text">Der Wert ist positiv, also gibt es zwei Lösungen und in zwei Wegen weiter ausgerechnet.</span>
+            <span id="math-text">\(x_1 = 2 + 5\quad\vert\quad x_2 = 2 - 5\)</span>
+            <span id="math-text">\(x_1 = 7\quad\vert\quad x_2 = -3\)</span>
+            <span id="text">Nun werden noch die Proben durchgeführt.</span>
+            <span id="math-text">\(4\times7-7^2+10 = -11\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(28-49+10 = -11\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(4\times(-3)-(-3)^2+10 = -11\)</span>
+            <span id="text">Die Terme werden wirder ausgerechnet.</span>
+            <span id="math-text">\(-12-9+10 = -11\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(-11 = -11\) w.A.</span>
+            <span id="text">Zum Schluss wird noch die Lösungsmenge angegeben.</span>
+            <span id="math-text">\(L=\{7;-3\}\)</span>
+        </div>
+        <div id="solution3-2">
+            <div class="closebutton" onclick="hidesolution('solution3-2')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">p-q-Formel: Lösung zur Aufgabe 2</span>
+            <span id="math-text">\(x^2-5x+9 = 3\)</span>
+            <span id="text">Die Gleichung wird umgestellt, damit sie = 0 ist.</span>
+            <span id="math-text">\(x^2-5x+9 = 3\quad\vert-3\)</span>
+            <span id="math-text">\(x^2-5x+6 = 0\)</span>
+            <span id="text">Nun wird in die p-q-Formel eingesetzt.</span>
+            <span id="math-text" class="complex">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+            <span id="math-text" class="complex">\(x = -\frac{-5}{2} \pm \sqrt{\frac{-5}{2}^2-6}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird zuerst ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x = \frac{5}{2} \pm \sqrt{\frac{25}{4}-6}\)</span>
+            <span id="math-text" class="complex">\(x = \frac{5}{2} \pm \sqrt{\frac{25}{4}-\frac{24}{4}}\)</span>
+            <span id="math-text" class="complex">\(x = \frac{5}{2} \pm \sqrt{\frac{1}{4}}\)</span>
+            <span id="text">Die Zahl unter der Wurzel ist positiv, also gibt es zwei Lösungen.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{5}{2} + \frac{1}{2}\quad\vert\quad x_2 = \frac{5}{2} - \frac{1}{2}\)</span>
+            <span id="text">Nun wird alles ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = \frac{6}{2}\quad\vert\quad x_2 = \frac{4}{2}\)</span>
+            <span id="text">Es kann noch gekürzt werden.</span>
+            <span id="math-text">\(x_1 = 3\quad\vert\quad x_2 = 2\)</span>
+            <span id="text">Nun wird die Probe gemacht.</span>
+            <span id="math-text">\(3^2-5\times3+9 = 3\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(9-15+9 = 3\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(3 = 3\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\(2^2-5\times2+9 = 3\)</span>
+            <span id="text">Die Terme werden wieder ausgerechnet.</span>
+            <span id="math-text">\(4-10+9 = 3\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(3 = 3\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{2;3\}\)</span>
+        </div>
+        <div id="solution3-3">
+            <div class="closebutton" onclick="hidesolution('solution3-3')">
+                <button id="button">Zurück</button>
+            </div>
+            <span id="solution-header">p-q-Formel: Lösung zur Aufgabe 3</span>
+            <span id="math-text">\(x^2+4x+3=0\)</span>
+            <span id="text">Es wird in die p-q-Formel eingesetzt.</span>
+            <span id="math-text" class="complex">\(x = -\frac{p}{2} \pm \sqrt{\frac{p}{2}^2-q}\)</span>
+            <span id="math-text" class="complex">\(x = -\frac{4}{2} \pm \sqrt{\frac{4}{2}^2-3}\)</span>
+            <span id="text">Der Teil unter der Wurzel wird zuerst ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x = -2 \pm \sqrt{4-3}\)</span>
+            <span id="math-text" class="complex">\(x = -2 \pm \sqrt{1}\)</span>
+            <span id="text">Die Zahl unter der Wurzel ist positiv, also gibt es zwei Lösungen.</span>
+            <span id="math-text" class="complex">\(x_1 = -2 + 1\quad\vert\quad x_2 = -2 - 1\)</span>
+            <span id="text">Nun wird alles ausgerechnet.</span>
+            <span id="math-text" class="complex">\(x_1 = -1\quad\vert\quad x_2 = -3\)</span>
+            <span id="text">Nun wird die Probe gemacht.</span>
+            <span id="math-text">\((-1)^2+4\times(-1)+3=0\)</span>
+            <span id="text">Die Terme werden ausgerechnet.</span>
+            <span id="math-text">\(1-4+3=0\)</span>
+            <span id="text">Dann werden die Terme zusammengefasst.</span>
+            <span id="math-text">\(0=0\) w.A.</span>
+            <span id="text">Die zweite Probe wird auch gemacht.</span>
+            <span id="math-text">\((-3)^2+4\times(-3)+3=0\)</span>
+            <span id="text">Die Terme werden wieder ausgerechnet.</span>
+            <span id="math-text">\(9-12+3=0\)</span>
+            <span id="text">Dann werden die Terme wieder zusammengefasst.</span>
+            <span id="math-text">\(0=0\) w.A.</span>
+            <span id="text">Die Lösungsmenge wird angegeben.</span>
+            <span id="math-text">\(L=\{-1;-3\}\)</span>
+        </div>
     </div>
-
-
-
-
-
-
-
     <footer>
         <div class="footer-sections">
             <div class="infos">
                 <span id="headline">Kontakt & Support</span>
                 <div class="item">
                     <span id="type">E-Mail:</span> <a href="mailto:support@nanvro.de">support@nanvro.de</a>
-                </div>
-                <div class="item">
-                    <span id="type">Discord:</span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
-                </div>
-            </div>
-            <div class="infos">
-                <span id="headline">Soziale Medien</span>
-                <div class="item">
-                    <span id="type">Instagram: </span> <a target="_blank" href="https://www.example.com">Lorem ipsum</a>
                 </div>
             </div>
         </div>
